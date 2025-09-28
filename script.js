@@ -97,3 +97,45 @@
                 bar.style.width = '0%';
             });
         });
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const formMessage = document.createElement('div');
+    form.appendChild(formMessage);
+    formMessage.style.marginTop = '10px';
+
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Form values
+        const name = form.querySelector('#name').value.trim();
+        const email = form.querySelector('#email').value.trim();
+        const message = form.querySelector('#message').value.trim();
+
+        // Simple validation
+        if (!name || !email || !message) {
+            formMessage.style.color = 'red';
+            formMessage.textContent = 'Please fill in all fields.';
+            return;
+        }
+
+        try {
+            // Send email via EmailJS
+            const response = await emailjs.sendForm(
+                'service_6aoe4m6',   // Replace with your EmailJS service ID
+                'template_2ymw2q',  // Replace with your EmailJS template ID
+                this                  // `this` refers to the form element
+            );
+
+            formMessage.style.color = 'green';
+            formMessage.textContent = 'Email sent successfully!';
+            console.log('SUCCESS:', response.status, response.text);
+            form.reset(); // Reset form after success
+
+        } catch (error) {
+            formMessage.style.color = 'red';
+            formMessage.textContent = 'Failed to send email. Check console for details.';
+            console.log('FAILED:', error);
+        }
+    });
+});
+
