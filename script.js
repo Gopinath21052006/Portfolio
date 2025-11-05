@@ -89,6 +89,7 @@ window.addEventListener('load', () => {
 // CONTACT FORM - FIXED VERSION
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
+    emailjs.init("kX37tXhyL6sM_J_h6");
     
     if (!contactForm) {
         console.log('Contact form not found');
@@ -163,10 +164,10 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Template params:', templateParams);
 
             // Send email using EmailJS - using sendForm instead of send
-            const response = await emailjs.sendForm(
-                'service_6aoe4m6',    // Your EmailJS Service ID
+            const response = await emailjs.send(
+                'service_lfosvqw',    // Your EmailJS Service ID
                 'template_2ymw2qe',    // Your EmailJS Template ID
-                contactForm           // Pass the form element directly
+                templateParams           // Pass the form element directly
             );
 
             console.log('Email sent successfully:', response);
