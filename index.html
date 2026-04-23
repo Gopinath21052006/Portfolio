@@ -480,22 +480,49 @@ const ro=new IntersectionObserver(entries=>{
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 
 /* contact */
-document.getElementById('subBtn').addEventListener('click',function(){
-  const n=document.getElementById('cn').value.trim();
-  const e=document.getElementById('ce').value.trim();
-  const m=document.getElementById('cm').value.trim();
-  const fb=document.getElementById('fmsg');
-  if(!n||!e||!m){fb.textContent='Please fill in all fields.';fb.className='err';return;}
-  this.textContent='Sending…';this.disabled=true;
-  emailjs.send('service_id','template_id',{from_name:n,from_email:e,message:m})
-    .then(()=>{
-      fb.textContent="✓ Message sent! I'll get back to you soon.";fb.className='ok';
-      document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('cm').value='';
-    })
-    .catch(()=>{fb.textContent='Something went wrong. Please try again.';fb.className='err';})
-    .finally(()=>{this.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';this.disabled=false;});
+document.getElementById('subBtn').addEventListener('click', function () {
+  const name = document.getElementById('cn').value.trim();
+  const email = document.getElementById('ce').value.trim();
+  const message = document.getElementById('cm').value.trim();
+  const feedback = document.getElementById('fmsg');
+  const btn = this;
+
+  if (!name || !email || !message) {
+    feedback.textContent = "Please fill in all fields.";
+    feedback.className = "err";
+    return;
+  }
+
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
+
+  emailjs.send(
+    "service_lfosvqw",
+    "template_2ymw2qe",
+    {
+      from_name: name,
+      from_email: email,
+      message: message
+    }
+  )
+  .then(() => {
+    feedback.textContent = "✓ Message sent successfully!";
+    feedback.className = "ok";
+
+    document.getElementById('cn').value = "";
+    document.getElementById('ce').value = "";
+    document.getElementById('cm').value = "";
+  })
+  .catch((error) => {
+    console.error(error);
+    feedback.textContent = "❌ Failed to send message.";
+    feedback.className = "err";
+  })
+  .finally(() => {
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled = false;
+  });
 });
 </script>
-<script src="script.js" ></script>
 </body>
 </html>
