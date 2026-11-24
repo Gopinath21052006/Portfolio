@@ -143,6 +143,106 @@ html[data-theme="light"] body::after {
   .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
 
   .nav-right { display: flex; align-items: center; gap: 10px; }
+
+  /* ─── OTHER WORLD BUTTON ─────────────────────── */
+  .other-world-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.12), inset 0 0 10px rgba(212, 175, 55, 0.04);
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    flex-shrink: 0;
+  }
+
+  [data-theme="light"] .other-world-btn {
+    background: rgba(184, 134, 11, 0.08);
+    border-color: rgba(184, 134, 11, 0.35);
+    color: #996515;
+    box-shadow: 0 0 12px rgba(184, 134, 11, 0.08);
+  }
+
+  .other-world-btn .ow-icon {
+    font-size: 0.8rem;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease, color 0.3s;
+  }
+
+  .other-world-btn .ow-glow {
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle, rgba(243, 214, 245, 0.25) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .other-world-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: owShimmer 4s infinite ease-in-out;
+  }
+
+  @keyframes owShimmer {
+    0%, 70% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  .other-world-btn:hover {
+    background: rgba(212, 175, 55, 0.18);
+    border-color: var(--gold);
+    color: #fff;
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.38), inset 0 0 12px rgba(212, 175, 55, 0.15);
+  }
+
+  [data-theme="light"] .other-world-btn:hover {
+    color: #000;
+    border-color: #996515;
+    box-shadow: 0 0 18px rgba(184, 134, 11, 0.25);
+  }
+
+  .other-world-btn:hover .ow-icon {
+    transform: rotate(20deg) scale(1.2);
+    color: #fff;
+  }
+
+  .other-world-btn:hover .ow-glow {
+    opacity: 1;
+  }
+
+  .other-world-btn:active {
+    transform: scale(0.97);
+  }
+
   .theme-btn {
     width: 36px; height: 36px; border-radius: 50%;
     border: 1px solid var(--border);
@@ -640,4 +740,246 @@ html[data-theme="light"] body::after {
     .stats-row { grid-template-columns: 1fr; }
     .sc { border-right: none; border-top: 1px solid var(--border2); }
     .sc:first-child { border-top: none; }
+  }
+
+  /* Drawer other world link */
+  .drawer-other-world {
+    margin-top: 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px !important;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    border-radius: 10px;
+    color: var(--gold) !important;
+    font-family: var(--mono) !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+  .drawer-other-world:hover {
+    background: rgba(212, 175, 55, 0.18);
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+  }
+  .drawer-other-world .ow-arrow {
+    color: var(--gold);
+    font-size: 0.9rem;
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  /* ═══ OTHER WORLD QUANTUM SINGULARITY & HYPERSPACE JUMP ═══ */
+  body.is-vanishing {
+    overflow: hidden !important;
+  }
+
+  /* The entire page dynamically spirals and implodes into the center singularity at 60fps */
+  body.is-vanishing > *:not(#portalVortexOverlay) {
+    animation: singularityImplode 0.8s cubic-bezier(0.25, 0.9, 0.3, 1) forwards !important;
+    pointer-events: none !important;
+    transform-origin: 50% 50% !important;
+  }
+
+  @keyframes singularityImplode {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    35% {
+      transform: scale(0.72) rotate(-3.5deg);
+      opacity: 0.85;
+    }
+    70% {
+      transform: scale(0.2) rotate(10deg);
+      opacity: 0.35;
+    }
+    100% {
+      transform: scale(0.001) rotate(22deg);
+      opacity: 0;
+    }
+  }
+
+  /* Portal overlay */
+  .portal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: #07060a;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    overflow: hidden;
+  }
+
+  .portal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  #warpTunnelCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .warp-center {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: warpCenterZoom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Glowing Portal Iris */
+  .portal-iris {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .iris-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.45), inset 0 0 20px rgba(212, 175, 55, 0.2);
+    animation: irisSpin 2.2s linear infinite;
+  }
+
+  .iris-ring::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 12px #fff, 0 0 20px var(--gold);
+  }
+
+  .iris-core {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(11, 10, 15, 0.95) 75%);
+    border: 1px solid rgba(243, 214, 245, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.4rem;
+    animation: corePulse 1s ease-in-out infinite alternate;
+  }
+
+  /* HUD Display */
+  .warp-hud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .warp-hud-tag {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  .warp-hud-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.6), 0 0 45px rgba(243, 214, 245, 0.3);
+  }
+
+  .warp-hud-realm {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    color: var(--subtext);
+    text-transform: uppercase;
+  }
+
+  .warp-meter {
+    width: 160px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 99px;
+    margin-top: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .warp-meter-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), #f3d6f5, #fff);
+    box-shadow: 0 0 10px var(--gold);
+    animation: meterCharge 0.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+  }
+
+  .warp-flare {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(212, 175, 55, 0.85) 35%, rgba(11, 10, 15, 0) 75%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out;
+    z-index: 10;
+  }
+
+  .warp-flare.active {
+    opacity: 1;
+  }
+
+  @keyframes warpCenterZoom {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes irisSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes corePulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    100% { transform: scale(1.08); box-shadow: 0 0 35px rgba(212, 175, 55, 0.7); }
+  }
+
+  @keyframes meterCharge {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+  @media (max-width: 480px) {
+    .other-world-btn {
+      padding: 0 10px;
+      height: 32px;
+      font-size: 0.65rem;
+      gap: 5px;
+    }
   }

@@ -26,6 +26,11 @@
         <li><a href="#contact"  class="nl">Contact</a></li>
       </ul>
       <div class="nav-right">
+        <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="other-world-btn" id="otherWorldBtn" title="Travel to Other World">
+          <span class="ow-icon"><i class="fas fa-meteor"></i></span>
+          <span class="ow-text">Other World</span>
+          <span class="ow-glow"></span>
+        </a>
         <button class="theme-btn" id="themeBtn" title="Toggle theme">
           <i class="fas fa-sun" id="themeIco"></i>
         </button>
@@ -46,6 +51,10 @@
   <a href="#skills"   class="dl">Skills</a>
   <a href="#projects" class="dl">Projects</a>
   <a href="#contact"  class="dl">Contact</a>
+  <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="drawer-other-world" id="drawerOtherWorld">
+    <span><i class="fas fa-meteor"></i> Other World</span>
+    <span class="ow-arrow">✦</span>
+  </a>
   <div class="drawer-theme">
     <button class="theme-btn" id="themeBtnM"><i class="fas fa-sun" id="themeIcoM"></i></button>
     <span>Toggle theme</span>
@@ -738,6 +747,234 @@ document.getElementById('subBtn').addEventListener('click', function () {
     btn.disabled = false;
   });
 });
+
+/* ═══ OTHER WORLD QUANTUM SINGULARITY & HYPERSPACE JUMP ═══ */
+(function() {
+  const otherWorldUrl = "https://gopinath21052006.github.io/GD_Portfolio/";
+  const desktopBtn = document.getElementById('otherWorldBtn');
+  const drawerBtn = document.getElementById('drawerOtherWorld');
+  const overlay = document.getElementById('portalVortexOverlay');
+  const canvas = document.getElementById('warpTunnelCanvas');
+  const flare = document.getElementById('warpFlare');
+  let isWarping = false;
+  let animId = null;
+
+  // Layered Cinematic Sci-Fi Audio Synthesizer
+  function playWarpSound() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      if (ctx.state === 'suspended') ctx.resume();
+
+      const now = ctx.currentTime;
+
+      // Layer 1: High-Tech Activation Ping (1400Hz -> 500Hz)
+      const pingOsc = ctx.createOscillator();
+      const pingGain = ctx.createGain();
+      pingOsc.type = 'sine';
+      pingOsc.frequency.setValueAtTime(1400, now);
+      pingOsc.frequency.exponentialRampToValueAtTime(500, now + 0.09);
+      pingGain.gain.setValueAtTime(0.28, now);
+      pingGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+      pingOsc.connect(pingGain);
+      pingGain.connect(ctx.destination);
+      pingOsc.start(now);
+      pingOsc.stop(now + 0.1);
+
+      // Layer 2: Deep Cinematic Sub-Bass Boom (150Hz -> 36Hz)
+      const subOsc = ctx.createOscillator();
+      const subGain = ctx.createGain();
+      subOsc.type = 'triangle';
+      subOsc.frequency.setValueAtTime(150, now);
+      subOsc.frequency.exponentialRampToValueAtTime(36, now + 0.85);
+      subGain.gain.setValueAtTime(0.5, now);
+      subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.9);
+      subOsc.connect(subGain);
+      subGain.connect(ctx.destination);
+      subOsc.start(now);
+      subOsc.stop(now + 0.95);
+
+      // Layer 3: Dimensional Energy Pitch Ramp (Filtered Sawtooth)
+      const warpOsc = ctx.createOscillator();
+      const warpFilter = ctx.createBiquadFilter();
+      const warpGain = ctx.createGain();
+      warpOsc.type = 'sawtooth';
+      warpFilter.type = 'lowpass';
+      warpFilter.frequency.setValueAtTime(350, now);
+      warpFilter.frequency.exponentialRampToValueAtTime(2200, now + 0.7);
+      warpOsc.frequency.setValueAtTime(180, now);
+      warpOsc.frequency.exponentialRampToValueAtTime(680, now + 0.75);
+      warpGain.gain.setValueAtTime(0.02, now);
+      warpGain.gain.linearRampToValueAtTime(0.2, now + 0.35);
+      warpGain.gain.exponentialRampToValueAtTime(0.001, now + 0.82);
+      warpOsc.connect(warpFilter);
+      warpFilter.connect(warpGain);
+      warpGain.connect(ctx.destination);
+      warpOsc.start(now);
+      warpOsc.stop(now + 0.85);
+
+      // Layer 4: Vacuum Suction Whoosh (Filtered Noise)
+      const bufferSize = ctx.sampleRate * 0.75;
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1;
+      }
+      const noiseSource = ctx.createBufferSource();
+      noiseSource.buffer = noiseBuffer;
+      const noiseFilter = ctx.createBiquadFilter();
+      noiseFilter.type = 'bandpass';
+      noiseFilter.frequency.setValueAtTime(950, now);
+      noiseFilter.frequency.exponentialRampToValueAtTime(200, now + 0.75);
+      noiseFilter.Q.setValueAtTime(2.5, now);
+      const noiseGain = ctx.createGain();
+      noiseGain.gain.setValueAtTime(0.22, now);
+      noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.75);
+      noiseSource.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(ctx.destination);
+      noiseSource.start(now);
+      noiseSource.stop(now + 0.8);
+    } catch (_) {}
+  }
+
+  function startHyperspaceCanvas() {
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      if (!isWarping) return;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const cx = width / 2;
+    const cy = height / 2;
+
+    // 70 Lightweight high-speed warp stars
+    const stars = [];
+    const starCount = 70;
+    for (let i = 0; i < starCount; i++) {
+      stars.push({
+        angle: Math.random() * Math.PI * 2,
+        dist: Math.random() * 40 + 10,
+        speed: Math.random() * 14 + 10,
+        len: Math.random() * 35 + 15,
+        color: Math.random() > 0.35 ? '#d4af37' : '#ffffff'
+      });
+    }
+
+    let startTime = performance.now();
+
+    function render(time) {
+      const elapsed = time - startTime;
+      ctx.fillStyle = 'rgba(7, 6, 10, 0.3)';
+      ctx.fillRect(0, 0, width, height);
+
+      stars.forEach(s => {
+        s.dist += s.speed * (1 + elapsed / 350);
+        const sx = cx + Math.cos(s.angle) * s.dist;
+        const sy = cy + Math.sin(s.angle) * s.dist;
+        const ex = cx + Math.cos(s.angle) * (s.dist + s.len * (1 + elapsed / 400));
+        const ey = cy + Math.sin(s.angle) * (s.dist + s.len * (1 + elapsed / 400));
+
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.lineTo(ex, ey);
+        ctx.stroke();
+
+        if (sx < 0 || sx > width || sy < 0 || sy > height) {
+          s.dist = Math.random() * 25 + 5;
+          s.angle = Math.random() * Math.PI * 2;
+        }
+      });
+
+      animId = requestAnimationFrame(render);
+    }
+
+    animId = requestAnimationFrame(render);
+  }
+
+  function triggerVanishWarp(e) {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) {
+      return; // allow opening in new tab normally
+    }
+    e.preventDefault();
+    if (isWarping) return;
+    isWarping = true;
+
+    // Close mobile drawer if open
+    if (typeof close === 'function') {
+      try { close(); } catch (_) {}
+    }
+
+    // 1. Play cinematic sci-fi audio FX
+    playWarpSound();
+
+    // 2. Start Quantum Singularity implosion of the page
+    document.body.classList.add('is-vanishing');
+
+    // 3. Reveal hyperspace warp overlay
+    if (overlay) {
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    // 4. Start hyperspace star streak tunnel
+    startHyperspaceCanvas();
+
+    // 5. Flash flare at 700ms
+    setTimeout(() => {
+      if (flare) flare.classList.add('active');
+    }, 700);
+
+    // 6. Navigate to destination at 850ms
+    setTimeout(() => {
+      window.location.href = otherWorldUrl;
+    }, 850);
+  }
+
+  if (desktopBtn) desktopBtn.addEventListener('click', triggerVanishWarp);
+  if (drawerBtn) drawerBtn.addEventListener('click', triggerVanishWarp);
+
+  // Restore page state if user navigates back using browser Back button
+  window.addEventListener('pageshow', function(evt) {
+    if (evt.persisted || isWarping) {
+      isWarping = false;
+      document.body.classList.remove('is-vanishing');
+      if (overlay) {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+      if (flare) flare.classList.remove('active');
+      if (animId) cancelAnimationFrame(animId);
+    }
+  });
+})();
 </script>
+
+<!-- ══ OTHER WORLD HYPERSPACE WARP OVERLAY ══════════════ -->
+<div id="portalVortexOverlay" class="portal-overlay" aria-hidden="true">
+  <canvas id="warpTunnelCanvas"></canvas>
+  <div class="warp-center">
+    <div class="portal-iris">
+      <div class="iris-ring"></div>
+      <div class="iris-core"><i class="fas fa-meteor"></i></div>
+    </div>
+    <div class="warp-hud">
+      <span class="warp-hud-tag">// DIMENSIONAL WARP</span>
+      <h2 class="warp-hud-title">Other World</h2>
+      <span class="warp-hud-realm">UNREAL ENGINE 5 REALM</span>
+      <div class="warp-meter"><div class="warp-meter-bar"></div></div>
+    </div>
+  </div>
+  <div class="warp-flare" id="warpFlare"></div>
+</div>
+
 </body>
 </html>
