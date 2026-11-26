@@ -1,417 +1,323 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gopinath — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Gopinath R — Full-Stack Developer focused on AI systems, UI/UX, and scalable web applications." />
+  <meta property="og:title" content="Gopinath — Full-Stack Developer" />
+  <meta property="og:description" content="Explore my full-stack projects, AI tools, verified certificates, and interactive web experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="scr/favicon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="scr/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ══ HEADER ═════════════════════════════════════════ -->
-<header id="hdr">
-  <div class="container">
-    <nav>
-      <a href="#home" class="logo">Gopi<em>nath</em></a>
-      <ul class="nav-links">
-        <li><a href="#home"     class="nl">Home</a></li>
-        <li><a href="#about"    class="nl">About</a></li>
-        <li><a href="#skills"   class="nl">Skills</a></li>
-        <li><a href="#projects" class="nl">Projects</a></li>
-        <li><a href="#certificates" class="nl">Certificates</a></li>
-        <li><a href="#contact"  class="nl">Contact</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="other-world-btn" id="otherWorldBtn" title="Travel to Other World">
-          <span class="ow-icon"><i class="fas fa-meteor"></i></span>
-          <span class="ow-text">Other World</span>
-          <span class="ow-glow"></span>
-        </a>
-        <button class="theme-btn" id="themeBtn" title="Toggle theme">
-          <i class="fas fa-sun" id="themeIco"></i>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
+  <!-- ══ HEADER ═════════════════════════════════════════ -->
+  <header id="hdr">
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">Gopi<em>nath</em></a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nl">Home</a></li>
+          <li><a href="#about" class="nl">About</a></li>
+          <li><a href="#skills" class="nl">Skills</a></li>
+          <li><a href="#projects" class="nl">Projects</a></li>
+          <li><a href="#certificates" class="nl">Certificates</a></li>
+          <li><a href="#contact" class="nl">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="other-world-btn" id="otherWorldBtn"
+            title="Travel to Other World">
+            <span class="ow-icon"><i class="fas fa-meteor"></i></span>
+            <span class="ow-text">Other World</span>
+            <span class="ow-glow"></span>
+          </a>
+          <button class="theme-btn" id="themeBtn" title="Toggle theme">
+            <i class="fas fa-sun" id="themeIco"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<!-- Mobile drawer -->
-<div class="drawer-overlay" id="dOverlay"></div>
-<div class="drawer" id="drawer">
-  <button class="drawer-close" id="dClose"><i class="fas fa-times"></i></button>
-  <a href="#home"     class="dl">Home</a>
-  <a href="#about"    class="dl">About</a>
-  <a href="#skills"   class="dl">Skills</a>
-  <a href="#projects" class="dl">Projects</a>
-  <a href="#certificates" class="dl">Certificates</a>
-  <a href="#contact"  class="dl">Contact</a>
-  <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="drawer-other-world" id="drawerOtherWorld">
-    <span><i class="fas fa-meteor"></i> Other World</span>
-    <span class="ow-arrow">✦</span>
-  </a>
-  <div class="drawer-theme">
-    <button class="theme-btn" id="themeBtnM"><i class="fas fa-sun" id="themeIcoM"></i></button>
-    <span>Toggle theme</span>
-  </div>
-</div>
-
-<!-- ══ HERO ═══════════════════════════════════════════ -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-badge">Open to opportunities &amp; collaboration</div>
-    <h1 class="hero-title">
-      Full-<em class="it">Stack</em><br>
-      Devel<span class="pk">oper</span>
-    </h1>
-    <p class="hero-role">// Gopinath &nbsp;·&nbsp; AI &amp; UI/UX Focused &nbsp;·&nbsp; dindigul , india </p>
-    <p class="hero-type"><span id="typed"></span></p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-gold"><i class="fas fa-layer-group"></i> View Projects</a>
-      <a href="https://github.com/gopinath21052006" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
-      <a href="#contact" class="btn btn-pink"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+  <!-- Mobile drawer -->
+  <div class="drawer-overlay" id="dOverlay"></div>
+  <div class="drawer" id="drawer">
+    <button class="drawer-close" id="dClose"><i class="fas fa-times"></i></button>
+    <a href="#home" class="dl">Home</a>
+    <a href="#about" class="dl">About</a>
+    <a href="#skills" class="dl">Skills</a>
+    <a href="#projects" class="dl">Projects</a>
+    <a href="#certificates" class="dl">Certificates</a>
+    <a href="#contact" class="dl">Contact</a>
+    <a href="https://gopinath21052006.github.io/GD_Portfolio/" class="drawer-other-world" id="drawerOtherWorld">
+      <span><i class="fas fa-meteor"></i> Other World</span>
+      <span class="ow-arrow">✦</span>
+    </a>
+    <div class="drawer-theme">
+      <button class="theme-btn" id="themeBtnM"><i class="fas fa-sun" id="themeIcoM"></i></button>
+      <span>Toggle theme</span>
     </div>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
-</section>
 
-<!-- ══ TECH STRIP ══════════════════════════════════════ -->
-<div class="tech-strip">
-  <div class="container">
-    <p class="strip-label">Tech Stack</p>
-    <div class="tech-icons">
-      <div class="ti"><i class="fab fa-react"></i><span>React</span></div>
-      <div class="ti"><i class="fab fa-js"></i><span>TypeScript</span></div>
-      <div class="ti"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-      <div class="ti"><i class="fas fa-server"></i><span>Express.js</span></div>
-      <div class="ti"><i class="fab fa-python"></i><span>Python</span></div>
-      <div class="ti"><i class="fas fa-server"></i><span>FastAPI</span></div>
-      <div class="ti"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
-      <div class="ti"><i class="fas fa-fire"></i><span>Firebase</span></div>
-      <div class="ti"><i class="fas fa-cloud"></i><span>Cloudinary</span></div>
-      <div class="ti"><i class="fab fa-html5"></i><span>HTML5</span></div>
-      <div class="ti"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-      <div class="ti"><i class="fas fa-wind"></i><span>Tailwind</span></div>
-      <div class="ti"><i class="fas fa-bolt"></i><span>Vite</span></div>
-      <div class="ti"><i class="fas fa-desktop"></i><span>Electron</span></div>
-      <div class="ti"><i class="fab fa-git-alt"></i><span>Git</span></div>
-      <div class="ti"><i class="fab fa-github"></i><span>GitHub</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ ABOUT ═══════════════════════════════════════════ -->
-<section id="about">
-  <div class="container">
-    <p class="lbl rv">About</p>
-    <h2 class="st rv d1">The mind <em>behind</em> the <span class="g">code</span></h2>
-    <div class="about-grid">
-      <div class="atext rv d2">
-        <p>Hey — I'm <strong>Gopinath</strong>, a <span class="gw">full-stack developer</span> based in Dindigul. I build applications that are technically solid, scalable, and genuinely useful — not just visually polished.</p>
-        <p>My stack spans <strong>React, TypeScript, Node.js, Python, and Firebase</strong>. I've shipped everything from <span class="pw">AI-powered desktop tools</span> to civic-tech platforms to real-time event systems. Architecture and performance are things I think about deeply.</p>
-        <div class="quote-block">
-          "I don't stop until I understand the problem properly or find a better solution. Complexity just means there's more to learn."
-        </div>
-        <p>Beyond code, I'm drawn to <strong>storytelling</strong>. It sharpens how I think about user experience — because the best products, like great stories, are built around the people who use them.</p>
-        <div class="pills">
-          <div class="pill"><span class="g">10+</span> Projects</div>
-          <div class="pill"><span class="g">●</span> Full-Stack</div>
-          <div class="pill"><span class="g">●</span> AI Integration</div>
-          <div class="pill"><span class="g">●</span> Open Source</div>
-        </div>
-        <br>
-        <a href="scr/GOPINATH_R.pdf" class="btn btn-outline" style="width:fit-content;margin-top:8px;">
-          <i class="fas fa-download"></i> Download CV
-        </a>
+  <!-- ══ HERO ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-badge">Open to opportunities &amp; collaboration</div>
+      <h1 class="hero-title">
+        Full-<em class="it">Stack</em><br>
+        Devel<span class="pk">oper</span>
+      </h1>
+      <p class="hero-role">// Gopinath &nbsp;·&nbsp; AI &amp; UI/UX Focused &nbsp;·&nbsp; dindigul , india </p>
+      <p class="hero-type"><span id="typed"></span></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-gold"><i class="fas fa-layer-group"></i> View Projects</a>
+        <a href="https://github.com/gopinath21052006" target="_blank" class="btn btn-outline"><i
+            class="fab fa-github"></i> GitHub</a>
+        <a href="#contact" class="btn btn-pink"><i class="fas fa-paper-plane"></i> Let's Talk</a>
       </div>
-      <div class="aimg rv d3">
-        <div class="profile-card">
-          <img src="scr/WhatsApp Image 2025-09-28 at 9.08.48 PM.jpeg" alt="Gopinath" onerror="this.style.display='none'" />
-          <div class="ptag">Full-Stack Developer · 2025</div>
-        </div>
-        <div class="pdeco"></div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+  </section>
+
+  <!-- ══ TECH STRIP ══════════════════════════════════════ -->
+  <div class="tech-strip">
+    <div class="container">
+      <p class="strip-label">Tech Stack</p>
+      <div class="tech-icons">
+        <div class="ti"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="ti"><i class="fab fa-js"></i><span>TypeScript</span></div>
+        <div class="ti"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="ti"><i class="fas fa-server"></i><span>Express.js</span></div>
+        <div class="ti"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="ti"><i class="fas fa-server"></i><span>FastAPI</span></div>
+        <div class="ti"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+        <div class="ti"><i class="fas fa-fire"></i><span>Firebase</span></div>
+        <div class="ti"><i class="fas fa-cloud"></i><span>Cloudinary</span></div>
+        <div class="ti"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="ti"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="ti"><i class="fas fa-wind"></i><span>Tailwind</span></div>
+        <div class="ti"><i class="fas fa-bolt"></i><span>Vite</span></div>
+        <div class="ti"><i class="fas fa-desktop"></i><span>Electron</span></div>
+        <div class="ti"><i class="fab fa-git-alt"></i><span>Git</span></div>
+        <div class="ti"><i class="fab fa-github"></i><span>GitHub</span></div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ══ SKILLS ══════════════════════════════════════════ -->
-<section class="skills-bg" id="skills">
-  <div class="container">
-    <p class="lbl rv">Skills</p>
-    <h2 class="st rv d1">What I <span class="g">build</span> <em>with</em></h2>
-    <div class="sgroups">
-
-      <div class="sg rv d1">
-        <div class="sg-head"><div class="sg-ico"><i class="fas fa-palette"></i></div><div class="sg-title">Frontend</div></div>
-        <div class="slist">
-          <div class="si"><div class="si-row"><span class="si-name">HTML5 &amp; CSS3</span><span class="si-pct">95%</span></div><div class="bar"><div class="bar-fill" data-w="95"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">JavaScript</span><span class="si-pct">92%</span></div><div class="bar"><div class="bar-fill" data-w="92"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">React.js</span><span class="si-pct">90%</span></div><div class="bar"><div class="bar-fill" data-w="90"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">TypeScript</span><span class="si-pct">85%</span></div><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">Tailwind CSS</span><span class="si-pct">88%</span></div><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+  <!-- ══ ABOUT ═══════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <p class="lbl rv">About</p>
+      <h2 class="st rv d1">The mind <em>behind</em> the <span class="g">code</span></h2>
+      <div class="about-grid">
+        <div class="atext rv d2">
+          <p>Hey — I'm <strong>Gopinath</strong>, a <span class="gw">full-stack developer</span> based in Dindigul. I
+            build applications that are technically solid, scalable, and genuinely useful — not just visually polished.
+          </p>
+          <p>My stack spans <strong>React, TypeScript, Node.js, Python, and Firebase</strong>. I've shipped everything
+            from <span class="pw">AI-powered desktop tools</span> to civic-tech platforms to real-time event systems.
+            Architecture and performance are things I think about deeply.</p>
+          <div class="quote-block">
+            "I don't stop until I understand the problem properly or find a better solution. Complexity just means
+            there's more to learn."
+          </div>
+          <p>Beyond code, I'm drawn to <strong>storytelling</strong>. It sharpens how I think about user experience —
+            because the best products, like great stories, are built around the people who use them.</p>
+          <div class="pills">
+            <div class="pill"><span class="g">10+</span> Projects</div>
+            <div class="pill"><span class="g">●</span> Full-Stack</div>
+            <div class="pill"><span class="g">●</span> AI Integration</div>
+            <div class="pill"><span class="g">●</span> Open Source</div>
+          </div>
+          <br>
+          <a href="scr/GOPINATH_R.pdf" class="btn btn-outline" style="width:fit-content;margin-top:8px;">
+            <i class="fas fa-download"></i> Download CV
+          </a>
         </div>
-      </div>
-
-      <div class="sg rv d2">
-        <div class="sg-head"><div class="sg-ico"><i class="fas fa-server"></i></div><div class="sg-title">Backend</div></div>
-        <div class="slist">
-          <div class="si"><div class="si-row"><span class="si-name">Node.js &amp; Express</span><span class="si-pct">88%</span></div><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">Python</span><span class="si-pct">85%</span></div><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">REST APIs</span><span class="si-pct">88%</span></div><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">PostgreSQL &amp; Prisma</span><span class="si-pct">82%</span></div><div class="bar"><div class="bar-fill" data-w="82"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">FastAPI &amp; Flask</span><span class="si-pct">80%</span></div><div class="bar"><div class="bar-fill" data-w="80"></div></div></div>
-        </div>
-      </div>
-
-      <div class="sg rv d3">
-        <div class="sg-head"><div class="sg-ico"><i class="fas fa-wrench"></i></div><div class="sg-title">Tools &amp; Platforms</div></div>
-        <div class="slist">
-          <div class="si"><div class="si-row"><span class="si-name">Firebase</span><span class="si-pct">85%</span></div><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">Git &amp; GitHub</span><span class="si-pct">92%</span></div><div class="bar"><div class="bar-fill" data-w="92"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">Cloudinary</span><span class="si-pct">80%</span></div><div class="bar"><div class="bar-fill" data-w="80"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">UI/UX Design</span><span class="si-pct">85%</span></div><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
-          <div class="si"><div class="si-row"><span class="si-name">AI Integration</span><span class="si-pct">80%</span></div><div class="bar"><div class="bar-fill" data-w="80"></div></div></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══ PROJECTS ════════════════════════════════════════ -->
-<section id="projects">
-  <div class="container">
-    <p class="lbl rv">Projects</p>
-    <h2 class="st rv d1">Things I've <span class="p">built</span></h2>
-
-    <div class="featured rv">
-      <div class="feat-media">
-        <div class="feat-badge">⭐ Featured</div>
-        <img src="scr/project_image/detrothon.png" alt="DETROTHON" onerror="this.style.display='none'" />
-      </div>
-      <div class="feat-body">
-        <h3>DETROTHON 2026 — Official Hackathon Platform</h3>
-        <p>Real-world event platform for a student-led innovation hackathon with Smartiva Technologies LLP. Handles registrations, submissions, and live announcements — built to scale under real event traffic.</p>
-        <div class="tags">
-          <span class="tag">React</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Firebase</span>
-          <span class="tag p">Tailwind CSS</span>
-          <span class="tag p">Real-World</span>
-        </div>
-        <div class="feat-links">
-          <a href="https://detrothon.web.app/" target="_blank" class="btn btn-gold"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          <a href="https://github.com/Gopinath21052006/Detrothon.git" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+        <div class="aimg rv d3">
+          <div class="profile-card">
+            <img src="scr/WhatsApp Image 2025-09-28 at 9.08.48 PM.jpeg" alt="Gopinath"
+              onerror="this.style.display='none'" />
+            <div class="ptag">Full-Stack Developer · 2025</div>
+          </div>
+          <div class="pdeco"></div>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- ══ SKILLS ══════════════════════════════════════════ -->
+  <section class="skills-bg" id="skills">
+    <div class="container">
+      <p class="lbl rv">Skills</p>
+      <h2 class="st rv d1">What I <span class="g">build</span> <em>with</em></h2>
+      <div class="sgroups">
 
+        <div class="sg rv d1">
+          <div class="sg-head">
+            <div class="sg-ico"><i class="fas fa-palette"></i></div>
+            <div class="sg-title">Frontend</div>
+          </div>
+          <div class="slist">
+            <div class="si">
+              <div class="si-row"><span class="si-name">HTML5 &amp; CSS3</span><span class="si-pct">95%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="95"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">JavaScript</span><span class="si-pct">92%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="92"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">React.js</span><span class="si-pct">90%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="90"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">TypeScript</span><span class="si-pct">85%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">Tailwind CSS</span><span class="si-pct">88%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="sg rv d2">
+          <div class="sg-head">
+            <div class="sg-ico"><i class="fas fa-server"></i></div>
+            <div class="sg-title">Backend</div>
+          </div>
+          <div class="slist">
+            <div class="si">
+              <div class="si-row"><span class="si-name">Node.js &amp; Express</span><span class="si-pct">88%</span>
+              </div>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">Python</span><span class="si-pct">85%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">REST APIs</span><span class="si-pct">88%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="88"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">PostgreSQL &amp; Prisma</span><span class="si-pct">82%</span>
+              </div>
+              <div class="bar">
+                <div class="bar-fill" data-w="82"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">FastAPI &amp; Flask</span><span class="si-pct">80%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="featured rv">
-  <div class="feat-media">
-    <div class="feat-badge">⭐ Featured</div>
-    <img src="scr/project_image/ai-reel-agent.png"
-         alt="Autonomous AI Reel Agent"
-         onerror="this.style.display='none'" />
-  </div>
+        <div class="sg rv d3">
+          <div class="sg-head">
+            <div class="sg-ico"><i class="fas fa-wrench"></i></div>
+            <div class="sg-title">Tools &amp; Platforms</div>
+          </div>
+          <div class="slist">
+            <div class="si">
+              <div class="si-row"><span class="si-name">Firebase</span><span class="si-pct">85%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">Git &amp; GitHub</span><span class="si-pct">92%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="92"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">Cloudinary</span><span class="si-pct">80%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="80"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">UI/UX Design</span><span class="si-pct">85%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="85"></div>
+              </div>
+            </div>
+            <div class="si">
+              <div class="si-row"><span class="si-name">AI Integration</span><span class="si-pct">80%</span></div>
+              <div class="bar">
+                <div class="bar-fill" data-w="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <div class="feat-body">
-    <h3>Autonomous AI Reel Agent — Intelligent Reel Recommendation System</h3>
-
-    <p>
-      AI-powered agent that continuously watches Reels, analyzes visual content
-      using local Vision AI, compares each Reel against a personalized target
-      profile, generates match scores, makes decisions, and continues processing
-      the next Reel — built with a privacy-first local AI architecture.
-    </p>
-
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">Ollama</span>
-      <span class="tag">LLaVA-Phi3</span>
-      <span class="tag p">Playwright</span>
-      <span class="tag p">SQLite</span>
-      <span class="tag p">Streamlit</span>
-      <span class="tag p">AI Agent</span>
+      </div>
     </div>
+  </section>
 
-    <div class="feat-links">
-      <a href="https://github.com/Gopinath21052006/Autonomous-AI-Reel-Agent.git"
-         target="_blank"
-         class="btn btn-outline">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-       <a href="https://drive.google.com/file/d/1TjNTSB_w57WsHy75rtdt7mA4DOA09QSb/view?usp=drive_link"
-         target="_blank"
-         class="btn btn-outline">
-        <i class="fas fa-video"></i> Demo
-      </a>
-    </div>
-  </div>
-</div>
+  <!-- ══ PROJECTS ════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <p class="lbl rv">Projects</p>
+      <h2 class="st rv d1">Things I've <span class="p">built</span></h2>
 
-    <div class="pgrid">
-      <div class="pc rv d2">
-  <div class="pc-img">
-    <img src="scr/project_image/deardays.jpg" alt="DearDays" onerror="this.style.display='none'" />
-  </div>
-
-  <div class="pc-body">
-    <h3>DearDays</h3>
-
-    <p>
-      An aesthetic scrapbook journal &amp; digital memory collection website for
-      the DearDays offline-first mobile app (Android &amp; iOS). Features
-      real-time oscilloscope waveform visualization, vintage cassette playback,
-      GSAP ScrollTrigger animations, and Lenis smooth scrolling.
-    </p>
-
-    <div class="pc-links">
-      <a href="https://gopinath21052006.github.io/DearDays_Website/" target="_blank" class="demo">
-        <i class="fas fa-external-link-alt"></i> Live Demo
-      </a>
-
-      <a href="https://github.com/Gopinath21052006/DearDays_Website.git" target="_blank" class="code">
-        <i class="fab fa-github"></i> Source Code
-      </a>
-
-      <a href="https://gopinath21052006.github.io/DearDays_Website/deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk" class="code">
-        <i class="fab fa-android"></i> APK
-      </a>
-    </div>
-  </div>
-</div>
-
-      <div class="pc rv d3">
-  <div class="pc-img">
-    <img src="scr/project_image/MotoRevive.png" alt="MotoRevive" onerror="this.style.display='none'" />
-  </div>
-
-  <div class="pc-body">
-
-
-    <h3>MotoRevive</h3>
-
-    <p>
-      A full-stack used motorcycle dealership management platform with seller
-      management, inspections, inventory tracking, customer bookings, sales,
-      analytics, and secure role-based dashboards. Built using React, Node.js,
-      Express, PostgreSQL, and Prisma ORM.
-    </p>
-
-    <div class="pc-links">
-      <a href="https://www.linkedin.com/posts/gopinath21052006_fullstackdevelopment-reactjs-nodejs-ugcPost-7472329796572831744-5mjT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaBIsYBj3Wn1ILxYYOssPDts9HnLkkRrQ4" target="_blank" class="demo">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-
-      <a href="https://github.com/Gopinath21052006/MotoRevive.git" target="_blank" class="code">
-        <i class="fab fa-github"></i> Source Code
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class="pc rv d4">
-  <div class="pc-img">
-    <img src="scr/project_image/temptalk_g2.png" alt="TempTalk G2" onerror="this.style.display='none'" />
-  </div>
-
-  <div class="pc-body">
-    <h3>TempTalk G2</h3>
-
-    <p>
-      A real-time temporary chat platform where users can create secure
-      password-protected rooms, share messages, voice notes, images, and files.
-      Built with React, TypeScript, Firebase Firestore, Cloudinary, and
-      Tailwind CSS with automatic room expiry after 60 minutes.
-    </p>
-
-    <div class="pc-links">
-      <a href="https://temptalk-g2.vercel.app/" target="_blank" class="demo">
-        <i class="fas fa-external-link-alt"></i> Live Demo
-      </a>
-
-      <a href="https://temptalk-g2.vercel.app/TempTalk-g2.apk" target="_blank" class="demo">
-        <i class="fab fa-android"></i> APK
-      </a>
-
-      <a href="https://github.com/Gopinath21052006/TempTalk_G2.git" target="_blank" class="code">
-        <i class="fab fa-github"></i> Source Code
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class="pc rv d4">
-  <div class="pc-img">
-    <img src="scr/project_image/apple_adventure.png" alt="Apple Adventure" onerror="this.style.display='none'" />
-  </div>
-
-  <div class="pc-body">
-    <h3>Apple Adventure</h3>
-
-    <p>
-      A premium, responsive landing page created for the Android game
-      <strong>Apple Adventure</strong>. Built from scratch using HTML5, CSS3,
-      and JavaScript without any frameworks or build tools, featuring a
-      cinematic game-themed design, responsive layouts, interactive navigation,
-      parallax effects, gallery lightbox, gameplay section, APK download,
-      ambient particle effects, and accessibility-focused interactions.
-    </p>
-
-    <div class="pc-links">
-      <a href="https://gopinath21052006.github.io/AppleAdventure_Game/" target="_blank" class="demo">
-        <i class="fas fa-external-link-alt"></i> Live Demo
-      </a>
-
-      <a href="https://gopinath21052006.github.io/AppleAdventure_Game/assets/Apple_Adventure.apk" target="_blank" class="demo">
-        <i class="fab fa-android"></i> APK
-      </a>
-
-      <a href="https://github.com/Gopinath21052006/AppleAdventure_Game.git" target="_blank" class="code">
-        <i class="fab fa-github"></i> Source Code
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="pc rv d2">
-        <div class="pc-img"><img src="scr/project_image/NeuroTrain_AI_Desktop_Assistant.png" alt="NeuroTrain" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>NeuroTrain — AI Assistant</h3>
-          <p>AI desktop app with voice, memory, and task automation. Built with FastAPI, React, Electron — modular and extensible.</p>
-          <div class="pc-links">
-            <a href="https://github.com/gopinath21052006/NeuroTrain" target="_blank" class="demo"><i class="fab fa-github"></i> Code</a>
+      <div class="featured rv">
+        <div class="feat-media">
+          <div class="feat-badge">⭐ Featured</div>
+          <img src="scr/project_image/detrothon.png" alt="DETROTHON" onerror="this.style.display='none'" />
+        </div>
+        <div class="feat-body">
+          <h3>DETROTHON 2026 — Official Hackathon Platform</h3>
+          <p>Real-world event platform for a student-led innovation hackathon with Smartiva Technologies LLP. Handles
+            registrations, submissions, and live announcements — built to scale under real event traffic.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Firebase</span>
+            <span class="tag p">Tailwind CSS</span>
+            <span class="tag p">Real-World</span>
+          </div>
+          <div class="feat-links">
+            <a href="https://detrothon.web.app/" target="_blank" class="btn btn-gold"><i
+                class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/Gopinath21052006/Detrothon.git" target="_blank" class="btn btn-outline"><i
+                class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
       </div>
@@ -419,522 +325,825 @@
 
 
 
+      <div class="featured rv">
+        <div class="feat-media">
+          <div class="feat-badge">⭐ Featured</div>
+          <img src="scr/project_image/ai-reel-agent.png" alt="Autonomous AI Reel Agent"
+            onerror="this.style.display='none'" />
+        </div>
 
-<div class="pc rv d2">
-  <div class="pc-img">
-    <img src="scr/project_image/duocontract_1.png" alt="DuoContract" onerror="this.style.display='none'" />
-  </div>
+        <div class="feat-body">
+          <h3>Autonomous AI Reel Agent — Intelligent Reel Recommendation System</h3>
 
-  <div class="pc-body">
-    <h3>DuoContract</h3>
+          <p>
+            AI-powered agent that continuously watches Reels, analyzes visual content
+            using local Vision AI, compares each Reel against a personalized target
+            profile, generates match scores, makes decisions, and continues processing
+            the next Reel — built with a privacy-first local AI architecture.
+          </p>
 
-    <p>
-      A modern web platform for creating digital agreements between two people.
-      Features real-time synchronization, contract approval workflows,
-      digital seal verification, and a premium responsive UI powered by Firebase.
-    </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">LLaVA-Phi3</span>
+            <span class="tag p">Playwright</span>
+            <span class="tag p">SQLite</span>
+            <span class="tag p">Streamlit</span>
+            <span class="tag p">AI Agent</span>
+          </div>
 
-    <div class="pc-links">
-      <a href="https://www.linkedin.com/posts/gopinath21052006_webdevelopment-reactjs-typescript-ugcPost-7471957832800677888-a2NU/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEaBIsYBj3Wn1ILxYYOssPDts9HnLkkRrQ4" target="_blank" class="demo">
-        <i class="fas fa-video"></i> Demo Video 
-      </a>
+          <div class="feat-links">
+            <a href="https://github.com/Gopinath21052006/Autonomous-AI-Reel-Agent.git" target="_blank"
+              class="btn btn-outline">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://drive.google.com/file/d/1TjNTSB_w57WsHy75rtdt7mA4DOA09QSb/view?usp=drive_link"
+              target="_blank" class="btn btn-outline">
+              <i class="fas fa-video"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <a href="https://github.com/Gopinath21052006/DuoContract_code.git" target="_blank" class="code">
-        <i class="fab fa-github"></i> Source Code
-      </a>
+      <div class="pgrid">
+        <div class="pc rv d2">
+          <div class="pc-img">
+            <img src="scr/project_image/deardays.jpg" alt="DearDays" onerror="this.style.display='none'" />
+          </div>
+
+          <div class="pc-body">
+            <h3>DearDays</h3>
+
+            <p>
+              An aesthetic scrapbook journal &amp; digital memory collection website for
+              the DearDays offline-first mobile app (Android &amp; iOS). Features
+              real-time oscilloscope waveform visualization, vintage cassette playback,
+              GSAP ScrollTrigger animations, and Lenis smooth scrolling.
+            </p>
+
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/DearDays_Website/" target="_blank" class="demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+
+              <a href="https://github.com/Gopinath21052006/DearDays_Website.git" target="_blank" class="code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+
+              <a href="https://gopinath21052006.github.io/DearDays_Website/deardays-v1.0.0-release.apk"
+                download="deardays-v1.0.0-release.apk" class="code">
+                <i class="fab fa-android"></i> APK
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d3">
+          <div class="pc-img">
+            <img src="scr/project_image/MotoRevive.png" alt="MotoRevive" onerror="this.style.display='none'" />
+          </div>
+
+          <div class="pc-body">
+
+
+            <h3>MotoRevive</h3>
+
+            <p>
+              A full-stack used motorcycle dealership management platform with seller
+              management, inspections, inventory tracking, customer bookings, sales,
+              analytics, and secure role-based dashboards. Built using React, Node.js,
+              Express, PostgreSQL, and Prisma ORM.
+            </p>
+
+            <div class="pc-links">
+              <a href="https://www.linkedin.com/posts/gopinath21052006_fullstackdevelopment-reactjs-nodejs-ugcPost-7472329796572831744-5mjT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaBIsYBj3Wn1ILxYYOssPDts9HnLkkRrQ4"
+                target="_blank" class="demo">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+
+              <a href="https://github.com/Gopinath21052006/MotoRevive.git" target="_blank" class="code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="pc rv d4">
+          <div class="pc-img">
+            <img src="scr/project_image/temptalk_g2.png" alt="TempTalk G2" onerror="this.style.display='none'" />
+          </div>
+
+          <div class="pc-body">
+            <h3>TempTalk G2</h3>
+
+            <p>
+              A real-time temporary chat platform where users can create secure
+              password-protected rooms, share messages, voice notes, images, and files.
+              Built with React, TypeScript, Firebase Firestore, Cloudinary, and
+              Tailwind CSS with automatic room expiry after 60 minutes.
+            </p>
+
+            <div class="pc-links">
+              <a href="https://temptalk-g2.vercel.app/" target="_blank" class="demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+
+              <a href="https://temptalk-g2.vercel.app/TempTalk-g2.apk" target="_blank" class="demo">
+                <i class="fab fa-android"></i> APK
+              </a>
+
+              <a href="https://github.com/Gopinath21052006/TempTalk_G2.git" target="_blank" class="code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="pc rv d4">
+          <div class="pc-img">
+            <img src="scr/project_image/apple_adventure.png" alt="Apple Adventure"
+              onerror="this.style.display='none'" />
+          </div>
+
+          <div class="pc-body">
+            <h3>Apple Adventure</h3>
+
+            <p>
+              A premium, responsive landing page created for the Android game
+              <strong>Apple Adventure</strong>. Built from scratch using HTML5, CSS3,
+              and JavaScript without any frameworks or build tools, featuring a
+              cinematic game-themed design, responsive layouts, interactive navigation,
+              parallax effects, gallery lightbox, gameplay section, APK download,
+              ambient particle effects, and accessibility-focused interactions.
+            </p>
+
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/AppleAdventure_Game/" target="_blank" class="demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+
+              <a href="https://gopinath21052006.github.io/AppleAdventure_Game/assets/Apple_Adventure.apk"
+                target="_blank" class="demo">
+                <i class="fab fa-android"></i> APK
+              </a>
+
+              <a href="https://github.com/Gopinath21052006/AppleAdventure_Game.git" target="_blank" class="code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="pc rv d2">
+          <div class="pc-img"><img src="scr/project_image/NeuroTrain_AI_Desktop_Assistant.png" alt="NeuroTrain"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>NeuroTrain — AI Assistant</h3>
+            <p>AI desktop app with voice, memory, and task automation. Built with FastAPI, React, Electron — modular and
+              extensible.</p>
+            <div class="pc-links">
+              <a href="https://github.com/gopinath21052006/NeuroTrain" target="_blank" class="demo"><i
+                  class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="pc rv d2">
+          <div class="pc-img">
+            <img src="scr/project_image/duocontract_1.png" alt="DuoContract" onerror="this.style.display='none'" />
+          </div>
+
+          <div class="pc-body">
+            <h3>DuoContract</h3>
+
+            <p>
+              A modern web platform for creating digital agreements between two people.
+              Features real-time synchronization, contract approval workflows,
+              digital seal verification, and a premium responsive UI powered by Firebase.
+            </p>
+
+            <div class="pc-links">
+              <a href="https://www.linkedin.com/posts/gopinath21052006_webdevelopment-reactjs-typescript-ugcPost-7471957832800677888-a2NU/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEaBIsYBj3Wn1ILxYYOssPDts9HnLkkRrQ4"
+                target="_blank" class="demo">
+                <i class="fas fa-video"></i> Demo Video
+              </a>
+
+              <a href="https://github.com/Gopinath21052006/DuoContract_code.git" target="_blank" class="code">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="pc rv d3">
+          <div class="pc-img"><img src="scr/project_image/LifeArena–Personal_Book_Collection_Website.png"
+              alt="LifeArena" onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>LifeArena — Digital Library</h3>
+            <p>Book collection platform with in-browser PDF/EPUB reading, category filtering, and responsive layout.</p>
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/LifeArena" target="_blank" class="demo"><i
+                  class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="pc rv d1">
+          <div class="pc-img"><img src="scr/project_image/civic_connect.png" alt="Civic Connect"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Civic Connect</h3>
+            <p>Citizen-to-authority issue reporting with location tracking and real-time status updates. Designed for
+              transparency and usability.</p>
+            <div class="pc-links">
+              <a href="https://test-seven-gamma-89.vercel.app/" target="_blank" class="demo"><i
+                  class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://github.com/god012345/CivicConnect" target="_blank" class="code"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="pc rv d3">
+          <div class="pc-img"><img src="scr/project_image/quiz_system.png" alt="Quiz"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Online Quiz Platform</h3>
+            <p>Full-stack quiz app with secure scoring, real-time leaderboard, and admin controls. Node.js + Firebase
+              backend.</p>
+            <div class="pc-links">
+              <a href="https://online-quiz-system-g8ti.onrender.com/" target="_blank" class="demo"><i
+                  class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d1">
+          <div class="pc-img"><img src="scr/project_image/family_budget_project.png" alt="Budget"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Family Budget Manager</h3>
+            <p>Django-based expense tracker with full CRUD, structured categories, and a clean household finance
+              interface.</p>
+            <div class="pc-links">
+              <a href="https://github.com/Gopinath21052006/family_budget_project" target="_blank" class="demo"><i
+                  class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d2">
+          <div class="pc-img"><img src="scr/project_image/PDF to DOCX Converter.png" alt="PDF"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>PDF → DOCX Converter</h3>
+            <p>Flask web app converting PDF files to DOCX with a simple interface and efficient server-side processing.
+            </p>
+            <div class="pc-links">
+              <a href="https://github.com/Gopinath21052006/Converter" target="_blank" class="demo"><i
+                  class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d3">
+          <div class="pc-img"><img src="scr/project_image/Personal_Portfolio_Website.png" alt="Portfolio"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Portfolio v1</h3>
+            <p>Previous iteration of the portfolio with clean layout, responsive design, and interactive elements.</p>
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/Portfolio-v1/" target="_blank" class="demo"><i
+                  class="fas fa-external-link-alt"></i> View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d1">
+          <div class="pc-img"><img src="scr/project_image/Online_Fruit_Shop_Website.png" alt="Fruit Shop"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Online Fruit Shop</h3>
+            <p>Responsive e-commerce UI with login, cart, and live price calculation. Built with HTML, CSS, JS,
+              Bootstrap.</p>
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/web-design1/" target="_blank" class="demo"><i
+                  class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pc rv d2">
+          <div class="pc-img"><img src="scr/project_image/rock_paper_scissors.png" alt="RPS"
+              onerror="this.style.display='none'" /></div>
+          <div class="pc-body">
+            <h3>Rock · Paper · Scissors</h3>
+            <p>Classic game reimagined with score tracking, theme toggle, and polished animations. Pure vanilla JS.</p>
+            <div class="pc-links">
+              <a href="https://gopinath21052006.github.io/rock-paper-scissors-recreated/" target="_blank"
+                class="demo"><i class="fas fa-gamepad"></i> Play</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
+  <!-- ══ CERTIFICATES ═══════════════════════════════════ -->
+  <section class="cert-bg" id="certificates">
+    <div class="container">
+      <p class="lbl rv">Certificates</p>
+      <h2 class="st rv d1">Verified <span class="g">credentials</span> &amp; <em>milestones</em></h2>
 
-      <div class="pc rv d3">
-        <div class="pc-img"><img src="scr/project_image/LifeArena–Personal_Book_Collection_Website.png" alt="LifeArena" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>LifeArena — Digital Library</h3>
-          <p>Book collection platform with in-browser PDF/EPUB reading, category filtering, and responsive layout.</p>
-          <div class="pc-links">
-            <a href="https://gopinath21052006.github.io/LifeArena" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+      <div class="cert-filters rv d1">
+        <button class="cert-filter-btn active" data-filter="all">All</button>
+        <button class="cert-filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="cert-filter-btn" data-filter="ai">AI &amp; ML</button>
+        <button class="cert-filter-btn" data-filter="coding">Coding &amp; Problem Solving</button>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card rv d1" data-cat="fullstack" data-title="Full Stack Developer Course"
+          data-issuer="Simplilearn" data-img="scr/certificates/Full Stack Developer Course_ simplilearn.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/Full Stack Developer Course_ simplilearn.png"
+              alt="Full Stack Developer Course"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-layer-group"></i></div>
+            <span class="cert-issuer-badge">Full-Stack</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Full Stack Developer Course</h3>
+            <p class="cert-meta">Simplilearn</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-
-
-      
-      <div class="pc rv d1">
-        <div class="pc-img"><img src="scr/project_image/civic_connect.png" alt="Civic Connect" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Civic Connect</h3>
-          <p>Citizen-to-authority issue reporting with location tracking and real-time status updates. Designed for transparency and usability.</p>
-          <div class="pc-links">
-            <a href="https://test-seven-gamma-89.vercel.app/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="https://github.com/god012345/CivicConnect" target="_blank" class="code"><i class="fab fa-github"></i></a>
+        <div class="cert-card rv d2" data-cat="ai" data-title="Oracle Cloud Infrastructure AI Foundations (OCI25AICFA)"
+          data-issuer="Oracle" data-img="scr/certificates/OCI25AICFA (1).jpeg">
+          <div class="cert-thumb">
+            <img src="scr/certificates/OCI25AICFA (1).jpeg" alt="OCI25AICFA"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-brain"></i></div>
+            <span class="cert-issuer-badge">AI &amp; ML</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>OCI AI Foundations Associate</h3>
+            <p class="cert-meta">Oracle</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-
-
-      <div class="pc rv d3">
-        <div class="pc-img"><img src="scr/project_image/quiz_system.png" alt="Quiz" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Online Quiz Platform</h3>
-          <p>Full-stack quiz app with secure scoring, real-time leaderboard, and admin controls. Node.js + Firebase backend.</p>
-          <div class="pc-links">
-            <a href="https://online-quiz-system-g8ti.onrender.com/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+        <div class="cert-card rv d3" data-cat="ai" data-title="Prompt Master Certificate" data-issuer="Naukri Campus"
+          data-img="scr/certificates/NaukriCampus_Prompt_Master_Certificate.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/NaukriCampus_Prompt_Master_Certificate.png"
+              alt="Prompt Master Certificate"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <span class="cert-issuer-badge">AI &amp; ML</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Prompt Master Certificate</h3>
+            <p class="cert-meta">Naukri Campus</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-      <div class="pc rv d1">
-        <div class="pc-img"><img src="scr/project_image/family_budget_project.png" alt="Budget" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Family Budget Manager</h3>
-          <p>Django-based expense tracker with full CRUD, structured categories, and a clean household finance interface.</p>
-          <div class="pc-links">
-            <a href="https://github.com/Gopinath21052006/family_budget_project" target="_blank" class="demo"><i class="fab fa-github"></i> Code</a>
+        <div class="cert-card rv d1" data-cat="ai" data-title="NCAT AI Participation"
+          data-issuer="Naukri Campus · May 2026" data-img="scr/certificates/nc_ai_ncat_participation_may_2026.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/nc_ai_ncat_participation_may_2026.png" alt="NCAT AI Participation"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-robot"></i></div>
+            <span class="cert-issuer-badge">AI &amp; ML</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>NCAT AI Participation</h3>
+            <p class="cert-meta">Naukri Campus &nbsp;·&nbsp; May 2026</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-      <div class="pc rv d2">
-        <div class="pc-img"><img src="scr/project_image/PDF to DOCX Converter.png" alt="PDF" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>PDF → DOCX Converter</h3>
-          <p>Flask web app converting PDF files to DOCX with a simple interface and efficient server-side processing.</p>
-          <div class="pc-links">
-            <a href="https://github.com/Gopinath21052006/Converter" target="_blank" class="demo"><i class="fab fa-github"></i> Code</a>
+        <div class="cert-card rv d2" data-cat="fullstack" data-title="JavaScript (Basic)" data-issuer="HackerRank"
+          data-img="scr/certificates/javascript_basic certificate.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/javascript_basic certificate.png" alt="JavaScript (Basic)"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fab fa-js"></i></div>
+            <span class="cert-issuer-badge">Full-Stack</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>JavaScript (Basic)</h3>
+            <p class="cert-meta">HackerRank</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-<div class="pc rv d3">
-        <div class="pc-img"><img src="scr/project_image/Personal_Portfolio_Website.png" alt="Portfolio" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Portfolio v1</h3>
-          <p>Previous iteration of the portfolio with clean layout, responsive design, and interactive elements.</p>
-          <div class="pc-links">
-            <a href="https://gopinath21052006.github.io/Portfolio-v1/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> View</a>
+        <div class="cert-card rv d3" data-cat="fullstack" data-title="CSS Certificate" data-issuer="HackerRank"
+          data-img="scr/certificates/css certificate.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/css certificate.png" alt="CSS Certificate"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fab fa-css3-alt"></i></div>
+            <span class="cert-issuer-badge">Full-Stack</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>CSS Certificate</h3>
+            <p class="cert-meta">HackerRank</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-      <div class="pc rv d1">
-        <div class="pc-img"><img src="scr/project_image/Online_Fruit_Shop_Website.png" alt="Fruit Shop" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Online Fruit Shop</h3>
-          <p>Responsive e-commerce UI with login, cart, and live price calculation. Built with HTML, CSS, JS, Bootstrap.</p>
-          <div class="pc-links">
-            <a href="https://gopinath21052006.github.io/web-design1/" target="_blank" class="demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+        <div class="cert-card rv d1" data-cat="coding" data-title="Python (Basic)" data-issuer="HackerRank"
+          data-img="scr/certificates/python_basic certificate.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/python_basic certificate.png" alt="Python (Basic)"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fab fa-python"></i></div>
+            <span class="cert-issuer-badge">Coding</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Python (Basic)</h3>
+            <p class="cert-meta">HackerRank</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
-      <div class="pc rv d2">
-        <div class="pc-img"><img src="scr/project_image/rock_paper_scissors.png" alt="RPS" onerror="this.style.display='none'" /></div>
-        <div class="pc-body">
-          <h3>Rock · Paper · Scissors</h3>
-          <p>Classic game reimagined with score tracking, theme toggle, and polished animations. Pure vanilla JS.</p>
-          <div class="pc-links">
-            <a href="https://gopinath21052006.github.io/rock-paper-scissors-recreated/" target="_blank" class="demo"><i class="fas fa-gamepad"></i> Play</a>
+        <div class="cert-card rv d2" data-cat="coding" data-title="Problem Solving (Basic)" data-issuer="HackerRank"
+          data-img="scr/certificates/problem_solving_basic certificate.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/problem_solving_basic certificate.png" alt="Problem Solving (Basic)"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-code"></i></div>
+            <span class="cert-issuer-badge">Coding</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Problem Solving (Basic)</h3>
+            <p class="cert-meta">HackerRank</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
-      </div>
 
+        <div class="cert-card rv d3" data-cat="coding" data-title="500 Difficulty Rating" data-issuer="CodeChef"
+          data-img="scr/certificates/gopin6038-500 difficulty rating.pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/gopin6038-500 difficulty rating.png" alt="500 Difficulty Rating"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-trophy"></i></div>
+            <span class="cert-issuer-badge">Coding</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>500 Difficulty Rating</h3>
+            <p class="cert-meta">CodeChef</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
 
+        <div class="cert-card rv d1" data-cat="coding" data-title="Achievement Certificate" data-issuer="eCertificate"
+          data-img="scr/certificates/eCertificate (1).pdf">
+          <div class="cert-thumb">
+            <img src="scr/certificates/thumbs/eCertificate (1).png" alt="Achievement Certificate"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-award"></i></div>
+            <span class="cert-issuer-badge">Coding</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Achievement Certificate</h3>
+            <p class="cert-meta">Verified Credential</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
 
-
-
-
-      
-
-
-      
-    </div>
-  </div>
-</section>
-
-<!-- ══ CERTIFICATES ═══════════════════════════════════ -->
-<section class="cert-bg" id="certificates">
-  <div class="container">
-    <p class="lbl rv">Certificates</p>
-    <h2 class="st rv d1">Verified <span class="g">credentials</span> &amp; <em>milestones</em></h2>
-
-    <div class="cert-filters rv d1">
-      <button class="cert-filter-btn active" data-filter="all">All</button>
-      <button class="cert-filter-btn" data-filter="fullstack">Full-Stack</button>
-      <button class="cert-filter-btn" data-filter="ai">AI &amp; ML</button>
-      <button class="cert-filter-btn" data-filter="coding">Coding &amp; Problem Solving</button>
-    </div>
-
-    <div class="cert-grid">
-      <div class="cert-card rv d1" data-cat="fullstack" data-title="Full Stack Developer Course" data-issuer="Simplilearn" data-img="scr/certificates/Full Stack Developer Course_ simplilearn.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/Full Stack Developer Course_ simplilearn.png" alt="Full Stack Developer Course" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-layer-group"></i></div>
-          <span class="cert-issuer-badge">Full-Stack · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>Full Stack Developer Course</h3>
-          <p class="cert-meta">Simplilearn</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d2" data-cat="ai" data-title="Oracle Cloud Infrastructure AI Foundations (OCI25AICFA)" data-issuer="Oracle" data-img="scr/certificates/OCI25AICFA (1).jpeg">
-        <div class="cert-thumb">
-          <img src="scr/certificates/OCI25AICFA (1).jpeg" alt="OCI25AICFA" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-brain"></i></div>
-          <span class="cert-issuer-badge">AI &amp; ML</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
-        </div>
-        <div class="cert-body">
-          <h3>OCI AI Foundations Associate</h3>
-          <p class="cert-meta">Oracle</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d3" data-cat="ai" data-title="Prompt Master Certificate" data-issuer="Naukri Campus" data-img="scr/certificates/NaukriCampus_Prompt_Master_Certificate.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/NaukriCampus_Prompt_Master_Certificate.png" alt="Prompt Master Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-wand-magic-sparkles"></i></div>
-          <span class="cert-issuer-badge">AI &amp; ML · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>Prompt Master Certificate</h3>
-          <p class="cert-meta">Naukri Campus</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d1" data-cat="ai" data-title="NCAT AI Participation" data-issuer="Naukri Campus · May 2026" data-img="scr/certificates/nc_ai_ncat_participation_may_2026.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/nc_ai_ncat_participation_may_2026.png" alt="NCAT AI Participation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-robot"></i></div>
-          <span class="cert-issuer-badge">AI &amp; ML · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>NCAT AI Participation</h3>
-          <p class="cert-meta">Naukri Campus &nbsp;·&nbsp; May 2026</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d2" data-cat="fullstack" data-title="JavaScript (Basic)" data-issuer="HackerRank" data-img="scr/certificates/javascript_basic certificate.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/javascript_basic certificate.png" alt="JavaScript (Basic)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fab fa-js"></i></div>
-          <span class="cert-issuer-badge">Full-Stack · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>JavaScript (Basic)</h3>
-          <p class="cert-meta">HackerRank</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d3" data-cat="fullstack" data-title="CSS Certificate" data-issuer="HackerRank" data-img="scr/certificates/css certificate.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/css certificate.png" alt="CSS Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fab fa-css3-alt"></i></div>
-          <span class="cert-issuer-badge">Full-Stack · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>CSS Certificate</h3>
-          <p class="cert-meta">HackerRank</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d1" data-cat="coding" data-title="Python (Basic)" data-issuer="HackerRank" data-img="scr/certificates/python_basic certificate.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/python_basic certificate.png" alt="Python (Basic)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fab fa-python"></i></div>
-          <span class="cert-issuer-badge">Coding · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>Python (Basic)</h3>
-          <p class="cert-meta">HackerRank</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d2" data-cat="coding" data-title="Problem Solving (Basic)" data-issuer="HackerRank" data-img="scr/certificates/problem_solving_basic certificate.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/problem_solving_basic certificate.png" alt="Problem Solving (Basic)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-code"></i></div>
-          <span class="cert-issuer-badge">Coding · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>Problem Solving (Basic)</h3>
-          <p class="cert-meta">HackerRank</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d3" data-cat="coding" data-title="500 Difficulty Rating" data-issuer="CodeChef" data-img="scr/certificates/gopin6038-500 difficulty rating.pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/gopin6038-500 difficulty rating.png" alt="500 Difficulty Rating" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-trophy"></i></div>
-          <span class="cert-issuer-badge">Coding · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>500 Difficulty Rating</h3>
-          <p class="cert-meta">CodeChef</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d1" data-cat="coding" data-title="Achievement Certificate" data-issuer="eCertificate" data-img="scr/certificates/eCertificate (1).pdf">
-        <div class="cert-thumb">
-          <img src="scr/certificates/thumbs/eCertificate (1).png" alt="Achievement Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-award"></i></div>
-          <span class="cert-issuer-badge">Coding · PDF</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> View PDF</div>
-        </div>
-        <div class="cert-body">
-          <h3>Achievement Certificate</h3>
-          <p class="cert-meta">Verified Credential</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <div class="cert-card rv d2" data-cat="coding" data-title="Participation &amp; Event Credential" data-issuer="2026" data-img="scr/certificates/IMG_20260720_150024_1.jpg.jpeg">
-        <div class="cert-thumb">
-          <img src="scr/certificates/IMG_20260720_150024_1.jpg.jpeg" alt="Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="cert-fallback"><i class="fas fa-certificate"></i></div>
-          <span class="cert-issuer-badge">Credential</span>
-          <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
-        </div>
-        <div class="cert-body">
-          <h3>Event &amp; Achievement Credential</h3>
-          <p class="cert-meta">2026</p>
-          <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
+        <div class="cert-card rv d2" data-cat="fullstack" data-title="Web Development Internship"
+          data-issuer="AIS Education · August 2025" data-img="scr/certificates/IMG_20260720_150024_1.jpg.jpeg">
+          <div class="cert-thumb">
+            <img src="scr/certificates/IMG_20260720_150024_1.jpg.jpeg" alt="Web Development Internship"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="cert-fallback"><i class="fas fa-certificate"></i></div>
+            <span class="cert-issuer-badge">Internship</span>
+            <div class="cert-overlay-hint"><i class="fas fa-expand"></i> Preview</div>
+          </div>
+          <div class="cert-body">
+            <h3>Web Development Internship</h3>
+            <p class="cert-meta">AIS Education &nbsp;·&nbsp; August 2025</p>
+            <span class="cert-action">View Certificate <i class="fas fa-arrow-right"></i></span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ STATS ═══════════════════════════════════════════ -->
-<section class="stats-bg">
-  <div class="container">
-    <div class="stats-row rv">
-      <div class="sc"><span class="sn" data-count="10" data-sfx="+">0</span><div class="sd">Projects Shipped</div></div>
-      <div class="sc"><span class="sn" data-count="10" data-sfx="+">0</span><div class="sd">Technologies</div></div>
-      <div class="sc"><span class="sn" data-count="3"  data-sfx="+">0</span><div class="sd">AI-Powered Apps</div></div>
-      <div class="sc"><span class="sn" data-count="100" data-sfx="%">0</span><div class="sd">Commitment</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FOCUS ════════════════════════════════════════════ -->
-<section id="focus">
-  <div class="container">
-    <p class="lbl rv">Current Focus</p>
-    <h2 class="st rv d1">Where I'm <em><span class="g">headed</span></em></h2>
-    <div class="focus-inner rv d2">
-      <div class="ft">
-        <p>I'm focused on building scalable full-stack applications that solve real-world problems. From enterprise management platforms to real-time communication systems and AI-powered tools, I enjoy creating software that is reliable, secure, and user-friendly.</p>
-
-        <p>I'm always learning new technologies, improving my software engineering skills, and looking for opportunities to build products that make a meaningful impact.</p>
-
-        <div class="chips">
-          <div class="chip">🚀 Full-Stack Development</div>
-          <div class="chip">⚡ Real-Time Applications</div>
-          <div class="chip">🏗️ Scalable Architecture</div>
-          <div class="chip">🤖 AI Solutions</div>
-          <div class="chip">🗄️ Database Design</div>
-          <div class="chip">📱 Responsive UI/UX</div>
+  <!-- ══ STATS ═══════════════════════════════════════════ -->
+  <section class="stats-bg">
+    <div class="container">
+      <div class="stats-row rv">
+        <div class="sc"><span class="sn" data-count="10" data-sfx="+">0</span>
+          <div class="sd">Projects Shipped</div>
+        </div>
+        <div class="sc"><span class="sn" data-count="10" data-sfx="+">0</span>
+          <div class="sd">Technologies</div>
+        </div>
+        <div class="sc"><span class="sn" data-count="3" data-sfx="+">0</span>
+          <div class="sd">AI-Powered Apps</div>
+        </div>
+        <div class="sc"><span class="sn" data-count="100" data-sfx="%">0</span>
+          <div class="sd">Commitment</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="code-card">
-        <div><span class="cm_">// current focus</span></div>
-        <div><span class="ck">const</span> <span class="cf">focus</span> = {</div>
-        <div>&nbsp;&nbsp;frontend: <span class="cs">"React + Tailwind"</span>,</div>
-        <div>&nbsp;&nbsp;backend: <span class="cs">"Node.js + Express"</span>,</div>
-        <div>&nbsp;&nbsp;database: <span class="cs">"PostgreSQL + Firebase"</span>,</div>
-        <div>&nbsp;&nbsp;goal: <span class="cs">"Build impactful software"</span></div>
-        <div>};</div>
-        <div>&nbsp;</div>
-        <div><span class="cm_">// always learning ✦</span></div>
+  <!-- ══ FOCUS ════════════════════════════════════════════ -->
+  <section id="focus">
+    <div class="container">
+      <p class="lbl rv">Current Focus</p>
+      <h2 class="st rv d1">Where I'm <em><span class="g">headed</span></em></h2>
+      <div class="focus-inner rv d2">
+        <div class="ft">
+          <p>I'm focused on building scalable full-stack applications that solve real-world problems. From enterprise
+            management platforms to real-time communication systems and AI-powered tools, I enjoy creating software that
+            is reliable, secure, and user-friendly.</p>
+
+          <p>I'm always learning new technologies, improving my software engineering skills, and looking for
+            opportunities to build products that make a meaningful impact.</p>
+
+          <div class="chips">
+            <div class="chip">🚀 Full-Stack Development</div>
+            <div class="chip">⚡ Real-Time Applications</div>
+            <div class="chip">🏗️ Scalable Architecture</div>
+            <div class="chip">🤖 AI Solutions</div>
+            <div class="chip">🗄️ Database Design</div>
+            <div class="chip">📱 Responsive UI/UX</div>
+          </div>
+        </div>
+
+        <div class="code-card">
+          <div><span class="cm_">// current focus</span></div>
+          <div><span class="ck">const</span> <span class="cf">focus</span> = {</div>
+          <div>&nbsp;&nbsp;frontend: <span class="cs">"React + Tailwind"</span>,</div>
+          <div>&nbsp;&nbsp;backend: <span class="cs">"Node.js + Express"</span>,</div>
+          <div>&nbsp;&nbsp;database: <span class="cs">"PostgreSQL + Firebase"</span>,</div>
+          <div>&nbsp;&nbsp;goal: <span class="cs">"Build impactful software"</span></div>
+          <div>};</div>
+          <div>&nbsp;</div>
+          <div><span class="cm_">// always learning ✦</span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══ CONTACT ══════════════════════════════════════════ -->
-<section class="contact-bg" id="contact">
-  <div class="container">
-    <p class="lbl rv">Contact</p>
-    <h2 class="st rv d1">Let's <span class="p">connect</span></h2>
-    <div class="cgrid">
-      <div class="cinfo rv d2">
-        <h3>Got a project in mind?</h3>
-        <p>I'm open to freelance work, collaboration, and genuine conversations about building things. Whether it's a quick question or a full project — just reach out.</p>
-        <div class="cd"><i class="fab fa-github"></i> github.com/gopinath21052006</div>
-        <div class="cd"><i class="fab fa-linkedin-in"></i> linkedin.com/in/gopinath21052006</div>
-        <div class="cd"><i class="fas fa-map-marker-alt"></i> Dindigul, Tamil Nadu, India</div>
+  <!-- ══ CONTACT ══════════════════════════════════════════ -->
+  <section class="contact-bg" id="contact">
+    <div class="container">
+      <p class="lbl rv">Contact</p>
+      <h2 class="st rv d1">Let's <span class="p">connect</span></h2>
+      <div class="cgrid">
+        <div class="cinfo rv d2">
+          <h3>Got a project in mind?</h3>
+          <p>I'm open to freelance work, collaboration, and genuine conversations about building things. Whether it's a
+            quick question or a full project — just reach out.</p>
+          <div class="cd"><i class="fab fa-github"></i> github.com/gopinath21052006</div>
+          <div class="cd"><i class="fab fa-linkedin-in"></i> linkedin.com/in/gopinath21052006</div>
+          <div class="cd"><i class="fas fa-map-marker-alt"></i> Dindigul, Tamil Nadu, India</div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/gopinath21052006/" target="_blank" class="sa"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/gopinath21052006" target="_blank" class="sa"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="rv d3">
+          <div class="cform">
+            <div class="ff"><label>Name</label><input type="text" id="cn" placeholder="Your name" /></div>
+            <div class="ff"><label>Email</label><input type="email" id="ce" placeholder="you@example.com" /></div>
+            <div class="ff"><label>Message</label><textarea id="cm"
+                placeholder="Tell me about your idea or project..."></textarea></div>
+            <button class="sub-btn" id="subBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+            <div id="fmsg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="fi">
+        <div class="flogo">Gopi<em>nath</em></div>
+        <p class="fc">© 2025 Gopinath. Designed &amp; built with care.</p>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/gopinath21052006/" target="_blank" class="sa"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/gopinath21052006/" target="_blank" class="sa"><i
+              class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/gopinath21052006" target="_blank" class="sa"><i class="fab fa-github"></i></a>
         </div>
       </div>
-      <div class="rv d3">
-        <div class="cform">
-          <div class="ff"><label>Name</label><input type="text" id="cn" placeholder="Your name" /></div>
-          <div class="ff"><label>Email</label><input type="email" id="ce" placeholder="you@example.com" /></div>
-          <div class="ff"><label>Message</label><textarea id="cm" placeholder="Tell me about your idea or project..."></textarea></div>
-          <button class="sub-btn" id="subBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
-          <div id="fmsg"></div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ══ FOOTER ═══════════════════════════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="fi">
-      <div class="flogo">Gopi<em>nath</em></div>
-      <p class="fc">© 2025 Gopinath. Designed &amp; built with care.</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/gopinath21052006/" target="_blank" class="sa"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/gopinath21052006" target="_blank" class="sa"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-(function() {
-        emailjs.init("kX37tXhyL6sM_J_h6"); // Your public key
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("kX37tXhyL6sM_J_h6"); // Your public key
     })();
 
-/* typing */
-const phrases = [
-  "Building scalable, real-world applications.",
-  "Turning complex ideas into clean products.",
-  "Performance, architecture, user experience.",
-  "AI systems. Civic tech. Full-stack platforms."
-];
-let pi=0,ci=0,del=false;
-const tEl=document.getElementById('typed');
-function type(){
-  const p=phrases[pi];
-  if(!del){tEl.textContent=p.slice(0,++ci);if(ci===p.length){del=true;setTimeout(type,1900);return;}}
-  else{tEl.textContent=p.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
-  setTimeout(type,del?36:60);
-}
-type();
-
-/* scroll: header + active nav */
-const hdr=document.getElementById('hdr');
-const nls=document.querySelectorAll('.nl');
-window.addEventListener('scroll',()=>{
-  hdr.classList.toggle('scrolled',window.scrollY>40);
-  const secs=document.querySelectorAll('section[id]');
-  let cur='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-130)cur=s.id;});
-  nls.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
-},{passive:true});
-
-/* mobile drawer */
-const drawer=document.getElementById('drawer');
-const dOverlay=document.getElementById('dOverlay');
-function open(){drawer.classList.add('open');dOverlay.classList.add('open');document.body.style.overflow='hidden';}
-function close(){drawer.classList.remove('open');dOverlay.classList.remove('open');document.body.style.overflow='';}
-document.getElementById('hamburger').addEventListener('click',open);
-document.getElementById('dClose').addEventListener('click',close);
-dOverlay.addEventListener('click',close);
-document.querySelectorAll('.dl').forEach(l=>l.addEventListener('click',close));
-
-/* theme */
-let dark=true;
-function setTheme(d){
-  dark=d;
-  document.documentElement.dataset.theme=d?'dark':'light';
-  const ico=d?'fa-sun':'fa-moon';
-  document.getElementById('themeIco').className=`fas ${ico}`;
-  document.getElementById('themeIcoM').className=`fas ${ico}`;
-}
-document.getElementById('themeBtn').addEventListener('click',()=>setTheme(!dark));
-document.getElementById('themeBtnM').addEventListener('click',()=>setTheme(!dark));
-// load saved theme
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  setTheme(savedTheme === "dark");
-} else {
-  setTheme(true);
-}
-
-// update setTheme
-function setTheme(d){
-  dark = d;
-  const theme = d ? 'dark' : 'light';
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem("theme", theme);
-
-  const ico = d ? 'fa-sun' : 'fa-moon';
-  document.getElementById('themeIco').className = `fas ${ico}`;
-  document.getElementById('themeIcoM').className = `fas ${ico}`;
-}
-/* reveal + bars + counters */
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting)return;
-    e.target.classList.add('in');
-    e.target.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.w+'%');
-    e.target.querySelectorAll('[data-count]').forEach(n=>{
-      const target=+n.dataset.count, sfx=n.dataset.sfx||'+';
-      let cur=0; const step=Math.ceil(target/45);
-      const t=setInterval(()=>{cur=Math.min(cur+step,target);n.textContent=cur+sfx;if(cur>=target)clearInterval(t);},28);
-    });
-    ro.unobserve(e.target);
-  });
-},{threshold:0.1});
-document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
-
-/* contact */
-document.getElementById('subBtn').addEventListener('click', function () {
-  const name = document.getElementById('cn').value.trim();
-  const email = document.getElementById('ce').value.trim();
-  const message = document.getElementById('cm').value.trim();
-  const feedback = document.getElementById('fmsg');
-  const btn = this;
-
-  if (!name || !email || !message) {
-    feedback.textContent = "Please fill in all fields.";
-    feedback.className = "err";
-    return;
-  }
-
-  btn.innerHTML = "Sending...";
-  btn.disabled = true;
-
-  emailjs.send(
-    "service_lfosvqw",
-    "template_2ymw2qe",
-    {
-      from_name: name,
-      from_email: email,
-      message: message
+    /* typing */
+    const phrases = [
+      "Building scalable, real-world applications.",
+      "Turning complex ideas into clean products.",
+      "Performance, architecture, user experience.",
+      "AI systems. Civic tech. Full-stack platforms."
+    ];
+    let pi = 0, ci = 0, del = false;
+    const tEl = document.getElementById('typed');
+    function type() {
+      const p = phrases[pi];
+      if (!del) { tEl.textContent = p.slice(0, ++ci); if (ci === p.length) { del = true; setTimeout(type, 1900); return; } }
+      else { tEl.textContent = p.slice(0, --ci); if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; } }
+      setTimeout(type, del ? 36 : 60);
     }
-  )
-  .then(() => {
-    feedback.innerHTML = `
+    type();
+
+    /* scroll: header + active nav */
+    const hdr = document.getElementById('hdr');
+    const nls = document.querySelectorAll('.nl');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+      const secs = document.querySelectorAll('section[id]');
+      let cur = '';
+      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+      nls.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    }, { passive: true });
+
+    /* mobile drawer */
+    const drawer = document.getElementById('drawer');
+    const dOverlay = document.getElementById('dOverlay');
+    function openDrawer() { drawer.classList.add('open'); dOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { drawer.classList.remove('open'); dOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('hamburger').addEventListener('click', openDrawer);
+    document.getElementById('dClose').addEventListener('click', closeDrawer);
+    dOverlay.addEventListener('click', closeDrawer);
+    document.querySelectorAll('.dl').forEach(l => l.addEventListener('click', closeDrawer));
+
+    /* theme */
+    let dark = true;
+    function setTheme(d) {
+      dark = d;
+      document.documentElement.dataset.theme = d ? 'dark' : 'light';
+      const ico = d ? 'fa-sun' : 'fa-moon';
+      document.getElementById('themeIco').className = `fas ${ico}`;
+      document.getElementById('themeIcoM').className = `fas ${ico}`;
+    }
+    function toggleTheme(e) {
+      if (!document.startViewTransition || !e || !e.currentTarget) {
+        setTheme(!dark);
+        return;
+      }
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      const endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+      document.documentElement.classList.add('theme-transitioning');
+      const transition = document.startViewTransition(() => {
+        setTheme(!dark);
+      });
+      transition.ready.then(() => {
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${endRadius}px at ${x}px ${y}px)`
+            ]
+          },
+          {
+            duration: 650,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            pseudoElement: '::view-transition-new(root)'
+          }
+        );
+      });
+      transition.finished.finally(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      });
+    }
+    document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+    document.getElementById('themeBtnM').addEventListener('click', toggleTheme);
+    // load saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme === "dark");
+    } else {
+      setTheme(true);
+    }
+
+    // update setTheme
+    function setTheme(d) {
+      dark = d;
+      const theme = d ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("theme", theme);
+
+      const ico = d ? 'fa-sun' : 'fa-moon';
+      document.getElementById('themeIco').className = `fas ${ico}`;
+      document.getElementById('themeIcoM').className = `fas ${ico}`;
+    }
+    /* reveal + bars + counters */
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.bar-fill').forEach(b => b.style.width = b.dataset.w + '%');
+        e.target.querySelectorAll('[data-count]').forEach(n => {
+          const target = +n.dataset.count, sfx = n.dataset.sfx || '+';
+          let cur = 0; const step = Math.ceil(target / 45);
+          const t = setInterval(() => { cur = Math.min(cur + step, target); n.textContent = cur + sfx; if (cur >= target) clearInterval(t); }, 28);
+        });
+        ro.unobserve(e.target);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+
+    /* contact */
+    document.getElementById('subBtn').addEventListener('click', function () {
+      const name = document.getElementById('cn').value.trim();
+      const email = document.getElementById('ce').value.trim();
+      const message = document.getElementById('cm').value.trim();
+      const feedback = document.getElementById('fmsg');
+      const btn = this;
+
+      if (!name || !email || !message) {
+        feedback.textContent = "Please fill in all fields.";
+        feedback.className = "err";
+        return;
+      }
+
+      btn.innerHTML = "Sending...";
+      btn.disabled = true;
+
+      emailjs.send(
+        "service_lfosvqw",
+        "template_2ymw2qe",
+        {
+          from_name: name,
+          from_email: email,
+          message: message
+        }
+      )
+        .then(() => {
+          feedback.innerHTML = `
       <div class="holo-verify" aria-hidden="true">
         <svg viewBox="0 0 72 72">
           <defs>
@@ -955,357 +1164,618 @@ document.getElementById('subBtn').addEventListener('click', function () {
         </svg>
       </div>
       <span>Message sent successfully!</span>`;
-    feedback.className = "ok";
+          feedback.className = "ok";
 
-    document.getElementById('cn').value = "";
-    document.getElementById('ce').value = "";
-    document.getElementById('cm').value = "";
-  })
-  .catch((error) => {
-    console.error(error);
-    feedback.textContent = "❌ Failed to send message.";
-    feedback.className = "err";
-  })
-  .finally(() => {
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    btn.disabled = false;
-  });
-});
-
-/* ═══ OTHER WORLD QUANTUM SINGULARITY & HYPERSPACE JUMP ═══ */
-(function() {
-  const otherWorldUrl = "https://gopinath21052006.github.io/GD_Portfolio/";
-  const desktopBtn = document.getElementById('otherWorldBtn');
-  const drawerBtn = document.getElementById('drawerOtherWorld');
-  const overlay = document.getElementById('portalVortexOverlay');
-  const canvas = document.getElementById('warpTunnelCanvas');
-  const flare = document.getElementById('warpFlare');
-  let isWarping = false;
-  let animId = null;
-
-  // Mastered 4-Layer Cinematic Sci-Fi Audio Synthesizer
-  function playWarpSound() {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      if (ctx.state === 'suspended') ctx.resume();
-
-      const now = ctx.currentTime;
-      const comp = ctx.createDynamicsCompressor();
-      comp.threshold.setValueAtTime(-12, now);
-      comp.ratio.setValueAtTime(6, now);
-      comp.connect(ctx.destination);
-
-      // Layer 1: High-Tech Activation Ping (1400Hz -> 500Hz)
-      const pingOsc = ctx.createOscillator();
-      const pingGain = ctx.createGain();
-      pingOsc.type = 'sine';
-      pingOsc.frequency.setValueAtTime(1400, now);
-      pingOsc.frequency.exponentialRampToValueAtTime(500, now + 0.09);
-      pingGain.gain.setValueAtTime(0.28, now);
-      pingGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
-      pingOsc.connect(pingGain);
-      pingGain.connect(comp);
-      pingOsc.start(now);
-      pingOsc.stop(now + 0.1);
-
-      // Layer 2: Deep Cinematic Sub-Bass Boom (150Hz -> 36Hz)
-      const subOsc = ctx.createOscillator();
-      const subGain = ctx.createGain();
-      subOsc.type = 'triangle';
-      subOsc.frequency.setValueAtTime(150, now);
-      subOsc.frequency.exponentialRampToValueAtTime(36, now + 0.9);
-      subGain.gain.setValueAtTime(0.55, now);
-      subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.95);
-      subOsc.connect(subGain);
-      subGain.connect(comp);
-      subOsc.start(now);
-      subOsc.stop(now + 0.98);
-
-      // Layer 3: Dimensional Energy Pitch Ramp (Filtered Sawtooth)
-      const warpOsc = ctx.createOscillator();
-      const warpFilter = ctx.createBiquadFilter();
-      const warpGain = ctx.createGain();
-      warpOsc.type = 'sawtooth';
-      warpFilter.type = 'lowpass';
-      warpFilter.frequency.setValueAtTime(350, now);
-      warpFilter.frequency.exponentialRampToValueAtTime(2600, now + 0.8);
-      warpOsc.frequency.setValueAtTime(180, now);
-      warpOsc.frequency.exponentialRampToValueAtTime(720, now + 0.85);
-      warpGain.gain.setValueAtTime(0.02, now);
-      warpGain.gain.linearRampToValueAtTime(0.22, now + 0.4);
-      warpGain.gain.exponentialRampToValueAtTime(0.001, now + 0.92);
-      warpOsc.connect(warpFilter);
-      warpFilter.connect(warpGain);
-      warpGain.connect(comp);
-      warpOsc.start(now);
-      warpOsc.stop(now + 0.95);
-
-      // Layer 4: Vacuum Suction Whoosh (Filtered Noise)
-      const bufferSize = ctx.sampleRate * 0.85;
-      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-      const output = noiseBuffer.getChannelData(0);
-      for (let i = 0; i < bufferSize; i++) {
-        output[i] = Math.random() * 2 - 1;
-      }
-      const noiseSource = ctx.createBufferSource();
-      noiseSource.buffer = noiseBuffer;
-      const noiseFilter = ctx.createBiquadFilter();
-      noiseFilter.type = 'bandpass';
-      noiseFilter.frequency.setValueAtTime(950, now);
-      noiseFilter.frequency.exponentialRampToValueAtTime(180, now + 0.85);
-      noiseFilter.Q.setValueAtTime(2.5, now);
-      const noiseGain = ctx.createGain();
-      noiseGain.gain.setValueAtTime(0.24, now);
-      noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
-      noiseSource.connect(noiseFilter);
-      noiseFilter.connect(noiseGain);
-      noiseGain.connect(comp);
-      noiseSource.start(now);
-      noiseSource.stop(now + 0.88);
-    } catch (_) {}
-  }
-
-  function startHyperspaceCanvas() {
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    window.addEventListener('resize', () => {
-      if (!isWarping) return;
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          document.getElementById('cn').value = "";
+          document.getElementById('ce').value = "";
+          document.getElementById('cm').value = "";
+        })
+        .catch((error) => {
+          console.error(error);
+          feedback.textContent = "❌ Failed to send message.";
+          feedback.className = "err";
+        })
+        .finally(() => {
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          btn.disabled = false;
+        });
     });
 
-    const cx = width / 2;
-    const cy = height / 2;
+    /* ═══ OTHER WORLD QUANTUM SINGULARITY & HYPERSPACE JUMP ═══ */
+    (function () {
+      const otherWorldUrl = "https://gopinath21052006.github.io/GD_Portfolio/";
+      const desktopBtn = document.getElementById('otherWorldBtn');
+      const drawerBtn = document.getElementById('drawerOtherWorld');
+      const overlay = document.getElementById('portalVortexOverlay');
+      const canvas = document.getElementById('warpTunnelCanvas');
+      const flare = document.getElementById('warpFlare');
+      let isWarping = false;
+      let animId = null;
 
-    // 90 HiDPI high-speed warp stars
-    const stars = [];
-    const starCount = 90;
-    const palette = ['#d4af37', '#f1d27a', '#f3d6f5', '#ffffff'];
-    for (let i = 0; i < starCount; i++) {
-      stars.push({
-        angle: Math.random() * Math.PI * 2,
-        dist: Math.random() * 40 + 10,
-        speed: Math.random() * 14 + 10,
-        len: Math.random() * 38 + 16,
-        color: palette[Math.floor(Math.random() * palette.length)]
-      });
-    }
+      // Mastered 4-Layer Cinematic Sci-Fi Audio Synthesizer
+      function playWarpSound() {
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          const ctx = new AudioCtx();
+          if (ctx.state === 'suspended') ctx.resume();
 
-    let startTime = performance.now();
+          const now = ctx.currentTime;
+          const comp = ctx.createDynamicsCompressor();
+          comp.threshold.setValueAtTime(-12, now);
+          comp.ratio.setValueAtTime(6, now);
+          comp.connect(ctx.destination);
 
-    function render(time) {
-      const elapsed = time - startTime;
-      const accel = 1 + Math.pow(elapsed / 500, 1.8);
-      ctx.fillStyle = 'rgba(7, 6, 10, 0.32)';
-      ctx.fillRect(0, 0, width, height);
+          // Layer 1: High-Tech Activation Ping (1400Hz -> 500Hz)
+          const pingOsc = ctx.createOscillator();
+          const pingGain = ctx.createGain();
+          pingOsc.type = 'sine';
+          pingOsc.frequency.setValueAtTime(1400, now);
+          pingOsc.frequency.exponentialRampToValueAtTime(500, now + 0.09);
+          pingGain.gain.setValueAtTime(0.28, now);
+          pingGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+          pingOsc.connect(pingGain);
+          pingGain.connect(comp);
+          pingOsc.start(now);
+          pingOsc.stop(now + 0.1);
 
-      stars.forEach(s => {
-        s.dist += s.speed * accel;
-        const sx = cx + Math.cos(s.angle) * s.dist;
-        const sy = cy + Math.sin(s.angle) * s.dist;
-        const ex = cx + Math.cos(s.angle) * (s.dist + s.len * accel);
-        const ey = cy + Math.sin(s.angle) * (s.dist + s.len * accel);
+          // Layer 2: Deep Cinematic Sub-Bass Boom (150Hz -> 36Hz)
+          const subOsc = ctx.createOscillator();
+          const subGain = ctx.createGain();
+          subOsc.type = 'triangle';
+          subOsc.frequency.setValueAtTime(150, now);
+          subOsc.frequency.exponentialRampToValueAtTime(36, now + 0.9);
+          subGain.gain.setValueAtTime(0.55, now);
+          subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.95);
+          subOsc.connect(subGain);
+          subGain.connect(comp);
+          subOsc.start(now);
+          subOsc.stop(now + 0.98);
 
-        ctx.strokeStyle = s.color;
-        ctx.lineWidth = Math.min(2.4, 1.2 + elapsed / 800);
-        ctx.beginPath();
-        ctx.moveTo(sx, sy);
-        ctx.lineTo(ex, ey);
-        ctx.stroke();
+          // Layer 3: Dimensional Energy Pitch Ramp (Filtered Sawtooth)
+          const warpOsc = ctx.createOscillator();
+          const warpFilter = ctx.createBiquadFilter();
+          const warpGain = ctx.createGain();
+          warpOsc.type = 'sawtooth';
+          warpFilter.type = 'lowpass';
+          warpFilter.frequency.setValueAtTime(350, now);
+          warpFilter.frequency.exponentialRampToValueAtTime(2600, now + 0.8);
+          warpOsc.frequency.setValueAtTime(180, now);
+          warpOsc.frequency.exponentialRampToValueAtTime(720, now + 0.85);
+          warpGain.gain.setValueAtTime(0.02, now);
+          warpGain.gain.linearRampToValueAtTime(0.22, now + 0.4);
+          warpGain.gain.exponentialRampToValueAtTime(0.001, now + 0.92);
+          warpOsc.connect(warpFilter);
+          warpFilter.connect(warpGain);
+          warpGain.connect(comp);
+          warpOsc.start(now);
+          warpOsc.stop(now + 0.95);
 
-        if (sx < 0 || sx > width || sy < 0 || sy > height) {
-          s.dist = Math.random() * 25 + 5;
-          s.angle = Math.random() * Math.PI * 2;
+          // Layer 4: Vacuum Suction Whoosh (Filtered Noise)
+          const bufferSize = ctx.sampleRate * 0.85;
+          const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            output[i] = Math.random() * 2 - 1;
+          }
+          const noiseSource = ctx.createBufferSource();
+          noiseSource.buffer = noiseBuffer;
+          const noiseFilter = ctx.createBiquadFilter();
+          noiseFilter.type = 'bandpass';
+          noiseFilter.frequency.setValueAtTime(950, now);
+          noiseFilter.frequency.exponentialRampToValueAtTime(180, now + 0.85);
+          noiseFilter.Q.setValueAtTime(2.5, now);
+          const noiseGain = ctx.createGain();
+          noiseGain.gain.setValueAtTime(0.24, now);
+          noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.85);
+          noiseSource.connect(noiseFilter);
+          noiseFilter.connect(noiseGain);
+          noiseGain.connect(comp);
+          noiseSource.start(now);
+          noiseSource.stop(now + 0.88);
+        } catch (_) { }
+      }
+
+      function startHyperspaceCanvas() {
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        window.addEventListener('resize', () => {
+          if (!isWarping) return;
+          width = window.innerWidth;
+          height = window.innerHeight;
+          canvas.width = width * dpr;
+          canvas.height = height * dpr;
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        });
+
+        const cx = width / 2;
+        const cy = height / 2;
+
+        // 90 HiDPI high-speed warp stars
+        const stars = [];
+        const starCount = 90;
+        const palette = ['#d4af37', '#f1d27a', '#f3d6f5', '#ffffff'];
+        for (let i = 0; i < starCount; i++) {
+          stars.push({
+            angle: Math.random() * Math.PI * 2,
+            dist: Math.random() * 40 + 10,
+            speed: Math.random() * 14 + 10,
+            len: Math.random() * 38 + 16,
+            color: palette[Math.floor(Math.random() * palette.length)]
+          });
+        }
+
+        let startTime = performance.now();
+
+        function render(time) {
+          const elapsed = time - startTime;
+          const accel = 1 + Math.pow(elapsed / 500, 1.8);
+          ctx.fillStyle = 'rgba(7, 6, 10, 0.32)';
+          ctx.fillRect(0, 0, width, height);
+
+          stars.forEach(s => {
+            s.dist += s.speed * accel;
+            const sx = cx + Math.cos(s.angle) * s.dist;
+            const sy = cy + Math.sin(s.angle) * s.dist;
+            const ex = cx + Math.cos(s.angle) * (s.dist + s.len * accel);
+            const ey = cy + Math.sin(s.angle) * (s.dist + s.len * accel);
+
+            ctx.strokeStyle = s.color;
+            ctx.lineWidth = Math.min(2.4, 1.2 + elapsed / 800);
+            ctx.beginPath();
+            ctx.moveTo(sx, sy);
+            ctx.lineTo(ex, ey);
+            ctx.stroke();
+
+            if (sx < 0 || sx > width || sy < 0 || sy > height) {
+              s.dist = Math.random() * 25 + 5;
+              s.angle = Math.random() * Math.PI * 2;
+            }
+          });
+
+          animId = requestAnimationFrame(render);
+        }
+
+        animId = requestAnimationFrame(render);
+      }
+
+      function triggerVanishWarp(e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) {
+          return; // allow opening in new tab normally
+        }
+        e.preventDefault();
+        if (isWarping) return;
+        isWarping = true;
+
+        // Spawn origin-aware shockwave from clicked button
+        const rect = e.currentTarget.getBoundingClientRect();
+        const wave = document.createElement('div');
+        wave.className = 'warp-shockwave';
+        wave.style.left = (rect.left + rect.width / 2) + 'px';
+        wave.style.top = (rect.top + rect.height / 2) + 'px';
+        document.body.appendChild(wave);
+        setTimeout(() => wave.remove(), 700);
+
+        // Close mobile drawer if open
+        if (typeof closeDrawer === 'function') {
+          try { closeDrawer(); } catch (_) { }
+        }
+
+        // 1. Play cinematic sci-fi audio FX
+        playWarpSound();
+
+        // 2. Start Quantum Singularity implosion of the page
+        document.body.classList.add('is-vanishing');
+
+        // 3. Reveal hyperspace warp overlay
+        if (overlay) {
+          overlay.classList.add('active');
+          overlay.setAttribute('aria-hidden', 'false');
+        }
+
+        // 4. Start HiDPI hyperspace star streak tunnel
+        startHyperspaceCanvas();
+
+        // 5. Flash flare at 750ms
+        setTimeout(() => {
+          if (flare) flare.classList.add('active');
+        }, 750);
+
+        // 6. Navigate to destination at 950ms
+        setTimeout(() => {
+          window.location.href = otherWorldUrl;
+        }, 950);
+      }
+
+      if (desktopBtn) desktopBtn.addEventListener('click', triggerVanishWarp);
+      if (drawerBtn) drawerBtn.addEventListener('click', triggerVanishWarp);
+
+      // Restore page state if user navigates back using browser Back button
+      window.addEventListener('pageshow', function (evt) {
+        if (evt.persisted || isWarping) {
+          isWarping = false;
+          document.body.classList.remove('is-vanishing');
+          if (overlay) {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+          }
+          if (flare) flare.classList.remove('active');
+          if (animId) cancelAnimationFrame(animId);
         }
       });
+    })();
+  </script>
 
-      animId = requestAnimationFrame(render);
-    }
-
-    animId = requestAnimationFrame(render);
-  }
-
-  function triggerVanishWarp(e) {
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) {
-      return; // allow opening in new tab normally
-    }
-    e.preventDefault();
-    if (isWarping) return;
-    isWarping = true;
-
-    // Spawn origin-aware shockwave from clicked button
-    const rect = e.currentTarget.getBoundingClientRect();
-    const wave = document.createElement('div');
-    wave.className = 'warp-shockwave';
-    wave.style.left = (rect.left + rect.width / 2) + 'px';
-    wave.style.top = (rect.top + rect.height / 2) + 'px';
-    document.body.appendChild(wave);
-    setTimeout(() => wave.remove(), 700);
-
-    // Close mobile drawer if open
-    if (typeof close === 'function') {
-      try { close(); } catch (_) {}
-    }
-
-    // 1. Play cinematic sci-fi audio FX
-    playWarpSound();
-
-    // 2. Start Quantum Singularity implosion of the page
-    document.body.classList.add('is-vanishing');
-
-    // 3. Reveal hyperspace warp overlay
-    if (overlay) {
-      overlay.classList.add('active');
-      overlay.setAttribute('aria-hidden', 'false');
-    }
-
-    // 4. Start HiDPI hyperspace star streak tunnel
-    startHyperspaceCanvas();
-
-    // 5. Flash flare at 750ms
-    setTimeout(() => {
-      if (flare) flare.classList.add('active');
-    }, 750);
-
-    // 6. Navigate to destination at 950ms
-    setTimeout(() => {
-      window.location.href = otherWorldUrl;
-    }, 950);
-  }
-
-  if (desktopBtn) desktopBtn.addEventListener('click', triggerVanishWarp);
-  if (drawerBtn) drawerBtn.addEventListener('click', triggerVanishWarp);
-
-  // Restore page state if user navigates back using browser Back button
-  window.addEventListener('pageshow', function(evt) {
-    if (evt.persisted || isWarping) {
-      isWarping = false;
-      document.body.classList.remove('is-vanishing');
-      if (overlay) {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
-      }
-      if (flare) flare.classList.remove('active');
-      if (animId) cancelAnimationFrame(animId);
-    }
-  });
-})();
-</script>
-
-<!-- ══ OTHER WORLD HYPERSPACE WARP OVERLAY ══════════════ -->
-<div id="portalVortexOverlay" class="portal-overlay" aria-hidden="true">
-  <canvas id="warpTunnelCanvas"></canvas>
-  <div class="warp-center">
-    <div class="portal-iris">
-      <div class="iris-ring"></div>
-      <div class="iris-core"><i class="fas fa-meteor"></i></div>
+  <!-- ══ OTHER WORLD HYPERSPACE WARP OVERLAY ══════════════ -->
+  <div id="portalVortexOverlay" class="portal-overlay" aria-hidden="true">
+    <canvas id="warpTunnelCanvas"></canvas>
+    <div class="warp-center">
+      <div class="portal-iris">
+        <div class="iris-ring"></div>
+        <div class="iris-core"><i class="fas fa-meteor"></i></div>
+      </div>
+      <div class="warp-hud">
+        <span class="warp-hud-tag">// DIMENSIONAL WARP</span>
+        <h2 class="warp-hud-title">Other World</h2>
+        <span class="warp-hud-realm">UNREAL ENGINE 5 REALM</span>
+        <div class="warp-meter">
+          <div class="warp-meter-bar"></div>
+        </div>
+      </div>
     </div>
-    <div class="warp-hud">
-      <span class="warp-hud-tag">// DIMENSIONAL WARP</span>
-      <h2 class="warp-hud-title">Other World</h2>
-      <span class="warp-hud-realm">UNREAL ENGINE 5 REALM</span>
-      <div class="warp-meter"><div class="warp-meter-bar"></div></div>
+    <div class="warp-flare" id="warpFlare"></div>
+  </div>
+
+  <!-- ══ CERTIFICATE LIGHTBOX MODAL ══════════════════════ -->
+  <div id="certModal" class="cert-modal" aria-hidden="true">
+    <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+    <div class="cert-modal-box">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate"><i
+          class="fas fa-times"></i></button>
+      <div class="cert-modal-img-wrap">
+        <img id="certModalImg" src="" alt="Certificate Preview"
+          onerror="this.style.display='none'; document.getElementById('certModalFallback').style.display='flex';" />
+        <div id="certModalFallback" class="cert-modal-fallback"><i class="fas fa-award"></i><span>Certificate file not
+            found</span></div>
+      </div>
+      <div class="cert-modal-info">
+        <h3 id="certModalTitle"></h3>
+        <p id="certModalIssuer"></p>
+      </div>
     </div>
   </div>
-  <div class="warp-flare" id="warpFlare"></div>
-</div>
 
-<!-- ══ CERTIFICATE LIGHTBOX MODAL ══════════════════════ -->
-<div id="certModal" class="cert-modal" aria-hidden="true">
-  <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
-  <div class="cert-modal-box">
-    <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate"><i class="fas fa-times"></i></button>
-    <div class="cert-modal-img-wrap">
-      <img id="certModalImg" src="" alt="Certificate Preview" onerror="this.style.display='none'; document.getElementById('certModalFallback').style.display='flex';" />
-      <div id="certModalFallback" class="cert-modal-fallback"><i class="fas fa-award"></i><span>Certificate file not found</span></div>
+  <script>
+    /* ═══ CERTIFICATES FILTER & LIGHTBOX ═══════════════════ */
+    (function () {
+      const filterBtns = document.querySelectorAll('.cert-filter-btn');
+      const cards = document.querySelectorAll('.cert-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+
+          cards.forEach(card => {
+            const match = filter === 'all' || card.dataset.cat === filter;
+            if (match) {
+              card.style.display = 'flex';
+              requestAnimationFrame(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+              });
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(10px) scale(0.96)';
+              setTimeout(() => {
+                if (btn.classList.contains('active') && btn.dataset.filter !== 'all' && card.dataset.cat !== btn.dataset.filter) {
+                  card.style.display = 'none';
+                }
+              }, 220);
+            }
+          });
+        });
+      });
+
+      const modal = document.getElementById('certModal');
+      const modalImg = document.getElementById('certModalImg');
+      const modalFallback = document.getElementById('certModalFallback');
+      const modalTitle = document.getElementById('certModalTitle');
+      const modalIssuer = document.getElementById('certModalIssuer');
+      const closeBtn = document.getElementById('certModalClose');
+      const backdrop = document.getElementById('certModalBackdrop');
+
+      function openCert(card) {
+        const thumbImg = card.querySelector('.cert-thumb img');
+        const src = (thumbImg && thumbImg.getAttribute('src')) || card.dataset.img || '';
+        modalFallback.style.display = 'none';
+        modalImg.style.display = 'block';
+        modalImg.src = src;
+        modalTitle.textContent = card.dataset.title || '';
+        modalIssuer.textContent = card.dataset.issuer || '';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeCert() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      cards.forEach(c => c.addEventListener('click', () => openCert(c)));
+      if (closeBtn) closeBtn.addEventListener('click', closeCert);
+      if (backdrop) backdrop.addEventListener('click', closeCert);
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeCert();
+      });
+    })();
+  </script>
+
+  <!-- ══ GITHUB TRANSITION OVERLAY ═════════════════════ -->
+  <div id="ghTransitionOverlay" class="gh-overlay" aria-hidden="true">
+    <canvas id="ghSwarmCanvas"></canvas>
+    <div class="gh-card">
+      <div class="gh-stage">
+        <div class="gh-orbs">
+          <span class="gh-orb o1"></span>
+          <span class="gh-orb o2"></span>
+          <span class="gh-orb o3"></span>
+          <span class="gh-orb o4"></span>
+          <span class="gh-orb o5"></span>
+          <span class="gh-orb o6"></span>
+          <span class="gh-orb o7"></span>
+          <span class="gh-orb o8"></span>
+        </div>
+        <div class="gh-complete-ring"></div>
+        <div class="gh-svg-wrap">
+          <svg viewBox="0 0 24 24" class="gh-svg">
+            <defs>
+              <linearGradient id="ghFillGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#d4af37" />
+                <stop offset="50%" stop-color="#00f0ff" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+              <clipPath id="ghClip">
+                <rect class="gh-clip-rect" x="0" y="24" width="24" height="24" />
+              </clipPath>
+            </defs>
+            <path id="ghPathOutline" class="gh-path-outline" d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.53v-1.85c-3.03.66-3.67-1.45-3.67-1.45-.5-1.26-1.21-1.6-1.21-1.6-.99-.68.07-.67.07-.67 1.09.08 1.67 1.12 1.67 1.12.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.69-1.45-2.42-.27-4.96-1.21-4.96-5.38 0-1.19.42-2.16 1.12-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3 1.12a10.4 10.4 0 015.5 0c2.08-1.41 3-1.12 3-1.12.6 1.5.22 2.61.11 2.89.7.76 1.12 1.73 1.12 2.92 0 4.18-2.55 5.1-4.98 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.19.63.75.52A11 11 0 0012 1.27z" />
+            <path id="ghPathFill" class="gh-path-fill" clip-path="url(#ghClip)" d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.53v-1.85c-3.03.66-3.67-1.45-3.67-1.45-.5-1.26-1.21-1.6-1.21-1.6-.99-.68.07-.67.07-.67 1.09.08 1.67 1.12 1.67 1.12.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.69-1.45-2.42-.27-4.96-1.21-4.96-5.38 0-1.19.42-2.16 1.12-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3 1.12a10.4 10.4 0 015.5 0c2.08-1.41 3-1.12 3-1.12.6 1.5.22 2.61.11 2.89.7.76 1.12 1.73 1.12 2.92 0 4.18-2.55 5.1-4.98 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.19.63.75.52A11 11 0 0012 1.27z" />
+          </svg>
+        </div>
+      </div>
+      <div class="gh-text" id="ghOverlayTitle">Connecting to GitHub</div>
+      <div class="gh-sub">// GOPINATH21052006</div>
     </div>
-    <div class="cert-modal-info">
-      <h3 id="certModalTitle"></h3>
-      <p id="certModalIssuer"></p>
+  </div>
+
+  <script>
+    /* ═══ GITHUB & LINKEDIN GRAVITATIONAL SWARM TRANSITION ═ */
+    (function () {
+      const ghOverlay = document.getElementById('ghTransitionOverlay');
+      const ghCanvas = document.getElementById('ghSwarmCanvas');
+      const ghTitle = document.getElementById('ghOverlayTitle');
+      const pathOutline = document.getElementById('ghPathOutline');
+      const pathFill = document.getElementById('ghPathFill');
+      const GH_PATH = "M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.53v-1.85c-3.03.66-3.67-1.45-3.67-1.45-.5-1.26-1.21-1.6-1.21-1.6-.99-.68.07-.67.07-.67 1.09.08 1.67 1.12 1.67 1.12.97 1.66 2.54 1.18 3.16.9.1-.7.38-1.18.69-1.45-2.42-.27-4.96-1.21-4.96-5.38 0-1.19.42-2.16 1.12-2.92-.11-.28-.49-1.39.11-2.89 0 0 .92-.29 3 1.12a10.4 10.4 0 015.5 0c2.08-1.41 3-1.12 3-1.12.6 1.5.22 2.61.11 2.89.7.76 1.12 1.73 1.12 2.92 0 4.18-2.55 5.1-4.98 5.37.39.34.74 1.01.74 2.04v3.02c0 .29.19.63.75.52A11 11 0 0012 1.27z";
+      const LI_PATH = "M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z";
+      let isNavigating = false;
+      let ghAnimId = null;
+
+      function startSwarmCanvas(isLinkedIn) {
+        if (!ghCanvas) return;
+        const ctx = ghCanvas.getContext('2d');
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        ghCanvas.width = w * dpr;
+        ghCanvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const cx = w / 2;
+        const cy = h / 2 - 22;
+        const colors = isLinkedIn
+          ? ['#0A66C2']
+          : ['#d4af37', '#00f0ff', '#a855f7', '#f3d6f5', '#10b981', '#fb7185', '#fbbf24', '#38bdf8'];
+        const maxR = Math.min(w, h) * 0.45;
+
+        const particles = Array.from({ length: 75 }, () => {
+          const angle = Math.random() * Math.PI * 2;
+          const radius = maxR * (0.45 + Math.random() * 0.65);
+          return {
+            angle,
+            radius,
+            angSpeed: isLinkedIn ? 0 : (0.035 + Math.random() * 0.045) * (Math.random() > 0.2 ? 1 : -1),
+            pullSpeed: 2.5 + Math.random() * 4.5,
+            size: 1.8 + Math.random() * 2.6,
+            color: colors[Math.floor(Math.random() * colors.length)]
+          };
+        });
+
+        const start = performance.now();
+        const isLight = document.documentElement.dataset.theme === 'light';
+        function render(now) {
+          const elapsed = now - start;
+          ctx.fillStyle = isLight ? 'rgba(255, 250, 252, 0.24)' : 'rgba(11, 10, 15, 0.22)';
+          ctx.fillRect(0, 0, w, h);
+
+          const accel = 1 + Math.pow(elapsed / 600, 1.5);
+          particles.forEach(p => {
+            if (p.radius > 4) {
+              p.angle += p.angSpeed * accel;
+              p.radius = Math.max(0, p.radius - p.pullSpeed * accel);
+            }
+            const x = cx + Math.cos(p.angle) * p.radius;
+            const y = cy + Math.sin(p.angle) * p.radius;
+            if (p.radius > 4) {
+              ctx.fillStyle = p.color;
+              ctx.beginPath();
+              ctx.arc(x, y, p.size, 0, Math.PI * 2);
+              ctx.fill();
+            }
+          });
+
+          if (elapsed < 1250) {
+            ghAnimId = requestAnimationFrame(render);
+          }
+        }
+        ghAnimId = requestAnimationFrame(render);
+      }
+
+      document.querySelectorAll('a[href*="github.com"], a[href*="linkedin.com"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) return;
+          e.preventDefault();
+          if (isNavigating) return;
+          isNavigating = true;
+
+          const url = this.href;
+          const isLinkedIn = url.includes('linkedin.com');
+          const d = isLinkedIn ? LI_PATH : GH_PATH;
+          if (pathOutline) pathOutline.setAttribute('d', d);
+          if (pathFill) pathFill.setAttribute('d', d);
+          if (ghTitle) ghTitle.textContent = isLinkedIn ? 'Connecting to LinkedIn' : 'Connecting to GitHub';
+
+          if (ghOverlay) {
+            ghOverlay.classList.toggle('li-mode', isLinkedIn);
+            ghOverlay.classList.add('active');
+            ghOverlay.setAttribute('aria-hidden', 'false');
+          }
+          startSwarmCanvas(isLinkedIn);
+
+          setTimeout(() => {
+            window.open(url, '_blank', 'noopener,noreferrer');
+            isNavigating = false;
+            if (ghAnimId) cancelAnimationFrame(ghAnimId);
+            if (ghOverlay) {
+              ghOverlay.classList.remove('active', 'li-mode');
+              ghOverlay.setAttribute('aria-hidden', 'true');
+            }
+          }, 1250);
+        });
+      });
+
+      window.addEventListener('pageshow', () => {
+        isNavigating = false;
+        if (ghAnimId) cancelAnimationFrame(ghAnimId);
+        if (ghOverlay) {
+          ghOverlay.classList.remove('active');
+          ghOverlay.setAttribute('aria-hidden', 'true');
+        }
+      });
+    })();
+  </script>
+
+<!-- ══ LIVE DEMO ROCKET LAUNCH OVERLAY ════════════════ -->
+<div id="demoLaunchOverlay" class="demo-overlay" aria-hidden="true">
+  <div class="demo-launch-card">
+    <div class="demo-pad-wrap">
+      <div class="demo-rocket-unit">
+        <svg class="demo-rocket-svg" viewBox="0 0 64 96" width="54" height="80" aria-hidden="true">
+          <defs>
+            <linearGradient id="rktBody" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f8fafc" />
+              <stop offset="55%" stop-color="#e2e8f0" />
+              <stop offset="100%" stop-color="#94a3b8" />
+            </linearGradient>
+            <linearGradient id="rktGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f1d27a" />
+              <stop offset="100%" stop-color="#d4af37" />
+            </linearGradient>
+            <radialGradient id="rktGlass" cx="35%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#e0f2fe" />
+              <stop offset="55%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#0284c7" />
+            </radialGradient>
+          </defs>
+          <!-- Left & Right Gold Fins -->
+          <path d="M18 56 L6 78 L18 74 Z" fill="url(#rktGold)" />
+          <path d="M46 56 L58 78 L46 74 Z" fill="url(#rktGold)" />
+          <!-- Nozzle -->
+          <path d="M24 76 L21 86 L43 86 L40 76 Z" fill="#334155" />
+          <!-- Main Metallic Fuselage -->
+          <path d="M32 6 C20 22 17 44 18 76 L46 76 C47 44 44 22 32 6 Z" fill="url(#rktBody)" />
+          <!-- Gold Nose Cone -->
+          <path d="M32 6 C26 14 23 22 21 28 L43 28 C41 22 38 14 32 6 Z" fill="url(#rktGold)" />
+          <!-- Center Fin -->
+          <path d="M32 58 L32 82" stroke="#d4af37" stroke-width="3" stroke-linecap="round" />
+          <!-- Glowing Porthole Window -->
+          <circle cx="32" cy="44" r="8.5" fill="#1e293b" />
+          <circle cx="32" cy="44" r="6" fill="url(#rktGlass)" />
+          <circle cx="30" cy="42" r="1.8" fill="#ffffff" opacity="0.85" />
+        </svg>
+        <div class="demo-flame-wrap">
+          <div class="flame-outer"></div>
+          <div class="flame-mid"></div>
+          <div class="flame-core"></div>
+        </div>
+      </div>
+      <div class="demo-puff p1"></div>
+      <div class="demo-puff p2"></div>
+      <div class="demo-smoke"></div>
+      <div class="demo-pad"></div>
     </div>
+    <div class="demo-title" id="demoLaunchTitle">Launching Demo</div>
+    <div class="demo-sub">// OPENING LIVE PREVIEW</div>
   </div>
 </div>
 
 <script>
-/* ═══ CERTIFICATES FILTER & LIGHTBOX ═══════════════════ */
-(function() {
-  const filterBtns = document.querySelectorAll('.cert-filter-btn');
-  const cards = document.querySelectorAll('.cert-card');
+/* ═══ LIVE DEMO ROCKET LAUNCH TRANSITION ═══════════════ */
+(function () {
+  const demoOverlay = document.getElementById('demoLaunchOverlay');
+  const demoTitle = document.getElementById('demoLaunchTitle');
+  let isLaunching = false;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
+  document.querySelectorAll('#projects .pc-links a.demo:not([href*="linkedin.com"]), #projects .feat-links a:not([href*="github.com"])').forEach(link => {
+    link.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.which === 2 || e.button === 1) return;
+      e.preventDefault();
+      if (isLaunching) return;
+      isLaunching = true;
 
-      cards.forEach(card => {
-        const match = filter === 'all' || card.dataset.cat === filter;
-        if (match) {
-          card.style.display = 'flex';
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0) scale(1)';
-          });
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px) scale(0.96)';
-          setTimeout(() => {
-            if (btn.classList.contains('active') && btn.dataset.filter !== 'all' && card.dataset.cat !== btn.dataset.filter) {
-              card.style.display = 'none';
-            }
-          }, 220);
+      const url = this.href;
+      const card = this.closest('.pc, .featured');
+      const h3 = card ? card.querySelector('h3') : null;
+      const name = h3 ? h3.textContent.split('—')[0].trim() : 'Live Demo';
+      if (demoTitle) demoTitle.textContent = 'Launching ' + name;
+
+      if (demoOverlay) {
+        demoOverlay.classList.add('active');
+        demoOverlay.setAttribute('aria-hidden', 'false');
+      }
+
+      setTimeout(() => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+        isLaunching = false;
+        if (demoOverlay) {
+          demoOverlay.classList.remove('active');
+          demoOverlay.setAttribute('aria-hidden', 'true');
         }
-      });
+      }, 1000);
     });
   });
 
-  const modal = document.getElementById('certModal');
-  const modalImg = document.getElementById('certModalImg');
-  const modalFallback = document.getElementById('certModalFallback');
-  const modalTitle = document.getElementById('certModalTitle');
-  const modalIssuer = document.getElementById('certModalIssuer');
-  const closeBtn = document.getElementById('certModalClose');
-  const backdrop = document.getElementById('certModalBackdrop');
-
-  function openCert(card) {
-    const thumbImg = card.querySelector('.cert-thumb img');
-    const src = (thumbImg && thumbImg.getAttribute('src')) || card.dataset.img || '';
-    modalFallback.style.display = 'none';
-    modalImg.style.display = 'block';
-    modalImg.src = src;
-    modalTitle.textContent = card.dataset.title || '';
-    modalIssuer.textContent = card.dataset.issuer || '';
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCert() {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  cards.forEach(c => c.addEventListener('click', () => openCert(c)));
-  if (closeBtn) closeBtn.addEventListener('click', closeCert);
-  if (backdrop) backdrop.addEventListener('click', closeCert);
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeCert();
+  window.addEventListener('pageshow', () => {
+    isLaunching = false;
+    if (demoOverlay) {
+      demoOverlay.classList.remove('active');
+      demoOverlay.setAttribute('aria-hidden', 'true');
+    }
   });
 })();
 </script>
 
 </body>
+
 </html>
