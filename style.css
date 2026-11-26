@@ -776,11 +776,47 @@ html[data-theme="light"] body::after {
     overflow: hidden !important;
   }
 
-  /* The entire page dynamically spirals and implodes into the center singularity at 60fps */
-  body.is-vanishing > *:not(#portalVortexOverlay) {
-    animation: singularityImplode 0.8s cubic-bezier(0.25, 0.9, 0.3, 1) forwards !important;
+  /* Subtle forward zoom into the portal (no awkward shrinking/rotating) */
+  body.is-vanishing > *:not(#portalVortexOverlay):not(.warp-shockwave) {
+    animation: portalStepIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     pointer-events: none !important;
     transform-origin: 50% 50% !important;
+  }
+
+  @keyframes portalStepIn {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 0;
+    }
+  }
+
+  /* Origin-aware shockwave ring from clicked button */
+  .warp-shockwave {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 30px var(--gold), inset 0 0 20px rgba(243, 214, 245, 0.6);
+    pointer-events: none;
+    z-index: 1000000;
+    transform: translate(-50%, -50%) scale(1);
+    animation: shockwaveExpand 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes shockwaveExpand {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(120);
+      opacity: 0;
+    }
   }
 
   @keyframes singularityImplode {
@@ -802,7 +838,7 @@ html[data-theme="light"] body::after {
     }
   }
 
-  /* Portal overlay */
+  /* Portal overlay with smooth radial expansion */
   .portal-overlay {
     position: fixed;
     inset: 0;
@@ -814,7 +850,8 @@ html[data-theme="light"] body::after {
     visibility: hidden;
     pointer-events: none;
     background: #07060a;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease, visibility 0.25s ease;
     overflow: hidden;
   }
 
@@ -822,6 +859,7 @@ html[data-theme="light"] body::after {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+    clip-path: circle(150% at 50% 50%);
   }
 
   #warpTunnelCanvas {
@@ -982,4 +1020,423 @@ html[data-theme="light"] body::after {
       font-size: 0.65rem;
       gap: 5px;
     }
+  }
+
+  /* ═══ CERTIFICATES SECTION ═══════════════════════════ */
+  .cert-bg {
+    background: var(--bg2);
+    border-top: 1px solid var(--border2);
+    border-bottom: 1px solid var(--border2);
+  }
+
+  .cert-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 34px;
+  }
+
+  .cert-filter-btn {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .cert-filter-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .cert-filter-btn.active {
+    background: rgba(212, 175, 55, 0.14);
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.2);
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 960px) {
+    .cert-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .cert-grid { grid-template-columns: 1fr; }
+  }
+
+  .cert-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease, opacity 0.25s ease;
+  }
+
+  /* Subtle gold shimmer sweep on hover */
+  .cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent);
+    transform: skewX(-22deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .cert-card:hover::before {
+    left: 160%;
+  }
+
+  .cert-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 24px rgba(212, 175, 55, 0.14);
+  }
+
+  .cert-thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--bg3);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border2);
+  }
+
+  .cert-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .cert-card:hover .cert-thumb img {
+    transform: scale(1.06);
+  }
+
+  .cert-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    color: var(--gold);
+    opacity: 0.7;
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+  }
+
+  .cert-issuer-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(11, 10, 15, 0.78);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--gold);
+  }
+
+  .cert-overlay-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(11, 10, 15, 0.55);
+    backdrop-filter: blur(3px);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .cert-card:hover .cert-overlay-hint {
+    opacity: 1;
+  }
+
+  .cert-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .cert-body h3 {
+    font-family: var(--serif);
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .cert-meta {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .cert-action {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .cert-action i {
+    transition: transform 0.25s ease;
+  }
+
+  .cert-card:hover .cert-action i {
+    transform: translateX(4px);
+  }
+
+  /* ─── CERTIFICATE LIGHTBOX MODAL ─── */
+  .cert-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+  }
+
+  .cert-modal.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .cert-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 5, 10, 0.85);
+    backdrop-filter: blur(10px);
+  }
+
+  .cert-modal-box {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 94vw);
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65), 0 0 35px rgba(212, 175, 55, 0.15);
+    transform: scale(0.94) translateY(12px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .cert-modal.open .cert-modal-box {
+    transform: scale(1) translateY(0);
+  }
+
+  .cert-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(11, 10, 15, 0.8);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .cert-modal-close:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: rotate(90deg);
+  }
+
+  .cert-modal-img-wrap {
+    width: 100%;
+    max-height: 68vh;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .cert-modal-img-wrap img {
+    width: 100%;
+    height: auto;
+    max-height: 68vh;
+    object-fit: contain;
+  }
+
+  .cert-modal-fallback {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 20px;
+    color: var(--gold);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+
+  .cert-modal-fallback i {
+    font-size: 3rem;
+    opacity: 0.8;
+  }
+
+  .cert-modal-info {
+    padding: 18px 24px;
+    border-top: 1px solid var(--border2);
+  }
+
+  .cert-modal-info h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .cert-modal-info p {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--muted);
+  }
+
+  /* ═══ HOLOGRAPHIC VERIFICATION SCAN ══════════════════ */
+  .holo-verify {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 10px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .holo-verify svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .holo-ring {
+    fill: none;
+    stroke: rgba(56, 189, 248, 0.35);
+    stroke-width: 1.5;
+    opacity: 0;
+    animation: holoRingIn 0.35s ease-out forwards;
+  }
+
+  .holo-beam {
+    fill: none;
+    stroke: #00f0ff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 42 150;
+    transform-origin: 36px 36px;
+    filter: drop-shadow(0 0 6px #00f0ff);
+    animation: holoScan 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .holo-orbit {
+    transform-origin: 36px 36px;
+    animation: holoOrbit 0.75s linear forwards;
+  }
+
+  .holo-dot {
+    fill: #38bdf8;
+    filter: drop-shadow(0 0 4px #00f0ff);
+  }
+
+  .holo-check {
+    fill: none;
+    stroke: #00f0ff;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 42;
+    stroke-dashoffset: 42;
+    filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.85));
+    animation: holoCheckDraw 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  }
+
+  .holo-pulse {
+    fill: none;
+    stroke: url(#holoGrad);
+    stroke-width: 1.5;
+    transform-origin: 36px 36px;
+    opacity: 0;
+    animation: holoPulseOut 0.55s ease-out 0.85s forwards;
+  }
+
+  @keyframes holoRingIn {
+    0% { opacity: 0; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes holoScan {
+    0% { transform: rotate(0deg); opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes holoOrbit {
+    0% { transform: rotate(0deg); opacity: 1; }
+    85% { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes holoCheckDraw {
+    0% { stroke-dashoffset: 42; opacity: 0.4; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+  }
+
+  @keyframes holoPulseOut {
+    0% { transform: scale(1); opacity: 0.85; }
+    100% { transform: scale(1.45); opacity: 0; }
   }
